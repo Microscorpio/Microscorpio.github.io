@@ -1,0 +1,13 @@
+h1 {
+  font-size: 30px; }
+  [data-dpr="2"] h1 {
+    font-size: 60px; }
+  [data-dpr="3"] h1 {
+    font-size: 90px; }
+
+div {
+  width: 12.5rem;
+  height: 12.5rem;
+  border: 0.25rem solid red; }
+
+/*# sourceMappingURL=index.css.map */
