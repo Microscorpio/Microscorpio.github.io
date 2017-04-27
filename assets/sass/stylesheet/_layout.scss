@@ -1,8 +1,14 @@
+html,body{
+	height: 100vh;
+	background-color: #f1f1f1;
+	box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
 h1{
-	@include font-dpr(30px);
+	@include font-dpr(15px);
 }
 div{
-	width: px2rem(200px);
-	height: px2rem(200px);
-	border: px2rem(4px) solid red;
+	height: px2rem(150px);
+	border: 2px solid red;
 }

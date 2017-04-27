@@ -1,13 +1,19 @@
+html, body {
+  height: 100vh;
+  background-color: #f1f1f1;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
 h1 {
-  font-size: 30px; }
+  font-size: 15px; }
   [data-dpr="2"] h1 {
-    font-size: 60px; }
+    font-size: 30px; }
   [data-dpr="3"] h1 {
-    font-size: 90px; }
+    font-size: 45px; }
 
 div {
-  width: 12.5rem;
-  height: 12.5rem;
-  border: 0.25rem solid red; }
+  height: 2rem;
+  border: 2px solid red; }
 
 /*# sourceMappingURL=index.css.map */
