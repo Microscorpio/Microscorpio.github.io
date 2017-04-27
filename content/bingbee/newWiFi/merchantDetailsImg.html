@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"/><!-- 禁止数字识别为电话号码 -->
+<title>商家环境</title>
+<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="static/css/seller_card.css" />
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<body class="bodyBgColor">
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <a class="react back" href="index.html">首页</a>
+        </div>
+        <h1 class="header-header">商家环境</h1>
+        <!--<h1 class="header-header">商品展示</h1>-->
+        <div class="header-wrap-right">
+			<a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </header>
+</div>
+<!-- 头部 end  -->
+<div class="content_all">
+	<div class="divLine_1REM"></div>
+	<div class="merchantDetails">
+         <!-- 小图片展示 -->
+         <ul class="merchantImg_show">
+             <li>
+                 <p><img alt="" src="static/images/1b.jpg"></p>
+             </li>
+             <li>
+                 <p><img alt="" src="static/images/2b.jpg"></p>
+             </li>
+             <li>
+                 <p><img alt="" src="static/images/3b.jpg"></p>
+             </li>
+         </ul>
+    </div>
+</div>
+<!--图片放大预览-->
+<div class="preview_picture displayNone">
+    <div>
+        <span class="preview_left"></span>
+        <ul class="big_image"></ul>
+        <span class="preview_right"></span>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	//预设内容高度
+	var winWidth=$(window).height();
+    var topHeight=$(".divLine_1REM").height();
+    $(".merchantDetails").css("min-height",winWidth-topHeight+"px");
+
+  // 中间展示图片的响应是居中
+  var winH=$(window).height();
+	  $(".preview_picture >div").height(winH+"px");
+  
+  //动态添加图片给蒙版里面
+  var Cmodel_RcenterUl="";
+  $(".merchantImg_show li").each(function(elemnts){
+	  var imgSrc=$(this).find("img").attr("src");
+	  var new_imgSrc= imgSrc.replace("small/","");
+   
+	  Cmodel_RcenterUl+="<li><img src='"+new_imgSrc+"' /> </li>"
+		
+	 });
+  $(".big_image").html(Cmodel_RcenterUl);
+  
+  //点击显示大图片
+  $(".merchantImg_show li").bind({
+	  "click": function(){
+		var windH=$(window).height();
+		  $(".preview_picture").show();
+		  $(".mask").show();
+		  model_get($(this).index());
+		  
+	   $(".preview_picture >div .big_image li").each(function(){
+		  if( $(this).find("img").height()>=windH){
+			   $(this).css("paddingTop",0);
+			   $(this).css("overflow","hideen");
+		   }else{
+		   
+			$(this).css("paddingTop",(windH/2-$(this).find("img").height()/2)+"px");
+		   }
+		   $("body").css("overflow","hidden");
+		 })
+		 
+	  }
+  });
+	  
+ 
+
+  $(".big_image li").bind({
+	  "click":function(){
+		  $(".preview_picture").hide();
+		  $(".mask").hide();
+		   $("body").css("overflow","auto");
+	  }
+  });
+});
+  
+function model_get(coun_index){
+  var coun_index= coun_index ||0;
+  $(".big_image li").eq(coun_index).css("zIndex","2").siblings("li").css("zIndex","0");
+  $(".preview_right").bind({
+	  "click":function(){
+		  coun_index++;
+		  $(".big_image li").eq(coun_index).css("zIndex","2").siblings("li").css("zIndex","0");
+		  if(coun_index>=$(".big_image li").length-1){
+			  coun_index=-1;
+		  }
+	  }
+  });
+  $(".preview_left").bind({
+	  "click":function(){
+		  if(coun_index <=0){
+			  coun_index=$(".big_image li").length-1;
+		  }else{
+			  coun_index--;
+		  }
+		  $(".big_image li").eq(coun_index).css("zIndex","2").siblings("li").css("zIndex","0");
+
+	  }
+  });
+}
+</script>
+</html>

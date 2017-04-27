@@ -1,0 +1,344 @@
+@charset "utf-8";
+/* CSS Document */
+.content_all{ background:#f1f1f1;}
+.WBH-to-details{ width:100%;  padding:0.2rem 0;  border:0.02rem solid #dbdbdb; border-left:none; border-right:none; background:#ffffff; display:flex; display: -webkit-flex;  display: -moz-flex;  display: -ms-flex; }
+.WBH-logo-img{ /* border:0.02rem solid #d2d2d2;*/ overflow:hidden; padding:0.02rem; margin:0 0.2rem;
+    width: 15%;
+    
+    min-width: .8rem;
+    max-width: 1.3rem;
+}
+.WBH-logo-msg{ width:90%; flex:1;-webkit-box-flex:1;  -moz-box-flex:1; color:#000; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+
+.WBH-logo-msg p{ font-size:0.32rem; line-height:2; }
+.WBH-logo-msg span{ color:#adadad; font-size:0.28rem;}
+.WBH-logo-location { padding-right:0.4rem;}
+.WBH-logo-location span{ color:#f7b52c; display:inline-block; /*font-size:0.28rem;*/ font-size:0.24rem; line-height:2; }
+.WBH-logo-location span i.icon{ font-size:0.24rem; color:#adadad;}
+.WBH-pre-msg{ margin-top:0.4rem; padding:0 0.2rem; overflow:hidden;}
+.WBH-pre-msg h4{font-size:.3rem;color:#848484; font-weight:normal;}
+
+/*卡券 由外层class控制 .orangeCard(抵用券主题class,默认) .greenCard(折扣券主题class) .redCard(红包主题class)*/
+.WBH-msg{ margin-top:0.2rem; /*min-height:2.3rem;*/ height:auto; width:100%; background:#f0c600; position:relative; display:flex; display: -webkit-flex;  display: -moz-flex;  display: -ms-flex; display:box;}
+.WBH-msg .WBH-round-border{ position:absolute; left:-0.1rem;}
+.WBH-msg .WBH-round-border-right{ position:absolute; right:-0.1rem;}
+.WBH-msg .WBH-round-border ul li,.WBH-msg .WBH-round-border-right ul li{ width:0.24rem; height:0.24rem; background:#f1f1f1; border-radius:50%; margin:0.04rem 0;}
+.WBH-msg .WBH-msg-left,.WBH-pre-msg .WBH-msg .WBH-msg-right{ padding:0 0.4rem; background:#f58b02; font-size:0.4rem;}
+.WBH-msg .WBH-msg-left.card{ padding:0 0.6rem;}
+.WBH-msg .WBH-msg-left p,.WBH-pre-msg .WBH-msg .WBH-msg-right a{ display:inline-block; width:0.4rem;}
+.WBH-msg .WBH-msg-left p{ line-height:1.5; color:#fff1ae; margin-top:0.36rem;}
+.WBH-msg .WBH-msg-right a{ line-height:1.2; color:#ffffff; margin-top:0.3rem;}
+.WBH-msg .WBH-msg-center{ flex:1;-webkit-box-flex: 1; -moz-box-flex: 1; width:90%; text-align:center;}
+.WBH-msg .WBH-msg-center>p{ color:#fbfb00; line-height:2.6;font-size: 0.3rem;}
+.WBH-msg .WBH-msg-center-cont{ border-bottom:0.04rem dashed #f58b02; text-align:center; padding-bottom:0.1rem;}
+.WBH-msg .WBH-msg-center-cont h3{color:#ffffff; font-size:0.8rem; line-height:1.4;}
+.WBH-msg .WBH-msg-center-cont p{ color:#faf800; line-height:2; font-size:0.3rem}
+.WBH-msg-time p{ text-align:right; font-size:0.28rem; color:#848484; line-height:2;}
+
+.orangeCard .WBH-msg{background:#f0c600;}
+.orangeCard .WBH-msg .WBH-round-border ul li{background:#f1f1f1;}
+.orangeCard .WBH-msg .WBH-msg-left,.orangeCard .WBH-msg .WBH-msg-right{  background:#f58b02;}
+.orangeCard .WBH-msg .WBH-msg-left p{color:#fff1ae;}
+.orangeCard .WBH-msg .WBH-msg-center>p{ color:#fbfb00;}
+.orangeCard .WBH-msg .WBH-msg-center-cont{ border-bottom:0.04rem dashed #f58b02;}
+.orangeCard .WBH-msg .WBH-msg-center-cont p{ color:#faf800;}
+
+.greenCard .WBH-msg{ background:#a2bf15}
+.greenCard .WBH-msg .WBH-msg-left,.greenCard .WBH-msg .WBH-msg-right{  background:#729d0e;}
+.greenCard .WBH-msg .WBH-msg-left p{color:#edff98;}
+.greenCard .WBH-msg .WBH-msg-center>p{ color:#e2ec05;}
+.greenCard .WBH-msg .WBH-msg-center-cont{ border-bottom:0.04rem dashed #729d0e;}
+.greenCard .WBH-msg .WBH-msg-center-cont p{ color:#eaf203;}
+
+.redCard .WBH-msg{ background:#eb4091}
+.redCard .WBH-msg .WBH-msg-left,.redCard .WBH-msg .WBH-msg-right{  background:#be206b;}
+.redCard .WBH-msg .WBH-msg-left p{color:#ffc3df; line-height:2; margin-top:0.46rem;}
+.redCard .WBH-msg .WBH-msg-center>p{ color:#fbfb00;}
+.redCard .WBH-msg .WBH-msg-center-cont{ border-bottom:0.04rem dashed #be206b;}
+.redCard .WBH-msg .WBH-msg-center-cont p{ color:#fbfb00;}
+
+@media screen and (max-width:345px){
+	a.WBH-to-details div.WBH-logo-msg{ width:60%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+	.WBH-to-details div.WBH-logo-msg{ width:60%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+	
+	.WBH-pre-msg .WBH-msg .WBH-msg-left p{/* margin-top:0.6rem;*/}
+	.WBH-pre-msg .WBH-msg .WBH-msg-right a{/* margin-top:0.56rem;*/}
+	.redCard .WBH-msg .WBH-msg-left p{/*margin-top:0.6rem;*/}
+	.WBH-useIt-msg a.WBH-to-details .WBH-logo-msg{ width:80%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+	
+	.WBH-useIt-msg .WBH-to-details .WBH-logo-msg{ width:80%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+	}
+	
+.WBH-useIt-msg{ margin-top:0.3rem;}
+.WBH-useIt-msg h4{font-size:.3rem;color:#909090; font-weight:normal; text-indent:1em; line-height:2;}
+.WBH-useIt-msg .WBH-useIt-msg-cont{ background:#ffffff; border:0.02rem solid #dbdbdb; padding:0.2rem 0; border-right:none; border-left:none;}
+.WBH-useIt-msg .WBH-useIt-msg-cont p{ line-height:2; font-size:0.24rem; /*text-indent:1em;*/ padding-left:0.2rem; color:#adadad;}
+.WBH-useIt-msg a.WBH-to-details{ margin:0; border-top:none; border-bottom:0.02rem dotted #d2d2d2;}
+.WBH-useIt-msg a.WBH-to-details .WBH-logo-msg p{text-indent:1em;}
+.WBH-useIt-msg a.WBH-to-details .WBH-logo-msg p.address{ color:#adadad; line-height:1; font-size:0.28rem;}
+a.WBH-to-details:last-child{ border-bottom:none;}
+
+.WBH-useIt-msg .WBH-to-details{ margin:0; border-top:none; border-bottom:0.02rem dotted #d2d2d2;}
+.WBH-useIt-msg .WBH-to-details .WBH-logo-msg p{text-indent:1em;}
+.WBH-useIt-msg .WBH-to-details .WBH-logo-msg p.address{ color:#adadad; line-height:1; font-size:0.28rem;}
+div.WBH-to-details:last-child{ border-bottom:none;}
+
+.WBH-useIt-msg .WBH-useIt-msg-list{border:0.02rem solid #dbdbdb; border-right:none; border-left:none;}
+.WBH-useIt-msg-more{ text-align:center; margin-bottom:1.4rem;}
+.WBH-useIt-msg-more a{line-height:4; color:#b2b2b2; font-size:0.32rem; text-decoration:underline;}
+/*重构footer样式
+*/
+.footer div.box-flex a.getCardIng {display: inline-block; width:100%; height:0.8rem; line-height:0.8rem;; text-align:center;border-radius:3px;  font-size:0.32rem; background:#f7b52c; color:#ffffff;}
+.footer div.box-flex a.getCardIng.getCarded{ background:#575757}
+/*行程惠 卡券样式*/
+.moveCard{background:#ffffff;/* border:0.02rem solid #d2d2d2;*/}
+.moveCard .WBH-round-border ul li{ background:#ffffff;}
+.moveCard a.WBH-to-details{ /*background:#b2b2b2;*/ margin:0 0 0.3rem 0;}
+.moveCard a.WBH-to-details.sign{ /*background:#f7b52c;*/}
+.moveCard a.WBH-to-details.sign .WBH-logo-msg span{ /*color:#ffeecb;*/color:#999;}
+.moveCard a.WBH-to-details div.WBH-logo-img{/* border:0.02rem solid #FFFFFF;*/}
+.moveCard a.WBH-to-details div.WBH-logo-msg,.moveCard a.WBH-to-details div.WBH-logo-location span i.icon{ color:#454444;;}
+.moveCard a.WBH-to-details div.WBH-logo-msg span{color:#d6d6d6;}
+.moveCard .WBH-msg-center h1{ font-size:1.5rem; line-height:1.5; color:#fff;}
+.moveCard .WBH-msg{ margin:0 0.5rem; width:auto;}
+.moveCard .WBH-msg-time p{ padding:0 0.5rem; line-height:3;}
+
+/*个人中心 卡券样式*/ 
+.userCard .WBH-msg-center .WBH-msg-center-cont>p{ text-align:center; padding-right:5%;}
+.userCard .WBH-msg-center .WBH-msg-center-cont .userCard-center-cont>span{ color:#fbfb00; font-size:0.32rem; line-height:2;}
+.userCard .WBH-msg-center .WBH-msg-center-cont .userCard-center-cont>b{ color:#ffffff; font-size:0.6rem; line-height:1.4;}
+.userCard .WBH-msg-center>p.address{ line-height:2.3}
+.userCard .WBH-msg-center .WBH-msg-center-cont .userCard-center-cont p, .userCard .WBH-msg-center .WBH-msg-center-cont .userCard-center-cont span{ display:inline-block; width:50%; text-align:center;}
+.userCard .WBH-msg-center .WBH-msg-center-cont .userCard-center-cont{ text-align: center;}
+.userCard .WBH-msg-center .WBH-msg-center-cont p.WBH-msg-center-cont-title{ text-align:left; text-indent:1em; font-size:0.32rem; color:#fff;}
+
+.merchantDetails{padding:0.1rem 0; background:#fff; border-top:0.02rem solid #dbdbdb; border-bottom:0.02rem solid #dbdbdb;}
+.merchantDetails .merchantLogo{overflow:hidden; padding:0.02rem; margin:0 0.1rem;width: 15%;min-width: .8rem;max-width: 1.3rem;}
+ 
+.merchantDetails .merchantInfo p{ color:#000; font-size:0.3rem; line-height:2;}
+.merchantDetails .merchantInfo span{color:#adadad; font-size:0.24rem;}
+.merchantDetails .merchantLocal { padding-right:0.4rem;}
+.merchantDetails .merchantLocal span{ color:#f7b52c; display:inline-block; /*font-size:0.28rem;*/ font-size:0.24rem; line-height:3; }
+.merchantDetails .merchantLocal span i.icon{ font-size:0.24rem; color:#adadad;}
+
+ 
+/* .WBH-msg-left,.WBH-msg-right{height:130px;} */
+.WBH-msg .WBH-msg-center{width:80.5%;}
+
+@media screen and (max-width:500px){
+	.WBH-msg .WBH-msg-center-cont h3{font-size:0.7rem;}
+	.WBH-msg .WBH-msg-center-cont p{ font-size:0.28rem; line-height:1.4;}
+	.WBH-msg .WBH-msg-center > p{ font-size:0.28rem; line-height:2;}
+	.WBH-msg .WBH-msg-center-cont{ border-bottom:0.02rem dashed #f58b02;}
+	.orangeCard .WBH-msg .WBH-msg-center-cont{ border-bottom:0.02rem dashed #f58b02;}
+	.greenCard .WBH-msg .WBH-msg-center-cont{ border-bottom:0.02rem dashed #729d0e;}
+	.redCard .WBH-msg .WBH-msg-center-cont{ border-bottom:0.02rem dashed #be206b;}
+	.WBH-msg .WBH-msg-left, .WBH-pre-msg .WBH-msg .WBH-msg-right{ font-size:0.32rem;}
+	.WBH-msg .WBH-round-border{ left:-0.08rem;}
+	.WBH-msg .WBH-msg-left p{ margin-top:0.3rem;}
+	.redCard .WBH-msg .WBH-msg-left p{margin-top:0.5rem;}
+	.WBH-msg .WBH-round-border ul li, .WBH-msg .WBH-round-border-right ul li{ width:0.21rem; height:0.21rem;}
+	.WBH-msg-time p{ font-size:0.26rem}
+}
+@media screen and (max-width:400px){
+	.WBH-msg .WBH-msg-center-cont h3{font-size:0.5rem;}
+	.WBH-msg .WBH-msg-center-cont p{ font-size:0.24rem;}
+	.WBH-msg .WBH-msg-center > p{ font-size:0.24rem;}
+	.WBH-msg .WBH-msg-left, .WBH-pre-msg .WBH-msg .WBH-msg-right{font-size:0.28rem; padding:0 0.3rem;}
+	.WBH-msg .WBH-msg-left p, .WBH-pre-msg .WBH-msg .WBH-msg-right a{ width:0.3rem;}
+	.WBH-msg .WBH-msg-left p{ margin-top:0.2rem;}
+	.WBH-msg .WBH-msg-right a{ margin-top:0.15rem;}
+	.redCard .WBH-msg .WBH-msg-left p{margin-top:0.4rem;}
+	.WBH-msg .WBH-round-border ul li, .WBH-msg .WBH-round-border-right ul li{ width:0.19rem; height:0.19rem;}
+	.WBH-msg-time p{ font-size:0.24rem}
+}
+/*窝边惠详情*/ 
+.WBH_details{
+    width: 100%;
+    padding-bottom:2rem;
+}
+  .WBh_content_header{
+      width: 100%;
+  }
+.WBH_details h3{
+    margin-top:.5rem;
+    padding:2% 3%;
+    font-weight: 100;
+    font-size: .36rem;
+    color:#909090;
+
+}
+.WBh_content_header >p{
+    background:#fff;
+    font-size: .28rem;
+    width: 96%;
+    line-height: 23px;
+    color: #adadad;
+    padding:2%;
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+}
+.WBh_content_center {
+    width: 100%;
+
+}
+.WBh_content_center .WBh_chain_store{
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+    display: block;
+    width: 100%;
+    background: #fff;
+}
+.WBh_chain_store li{
+
+    display: inline-block;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: flex;
+    border-bottom:1px dashed #dddddd;
+    width: 94%;
+    margin: 0 auto;
+    padding:4% 2%;
+}
+.WBh_chain_store li:last-child{
+    border-bottom: 0;
+}
+.WBh_chain_store li> span{
+    display: block;
+    font-size:.32rem;
+    color: #313131;
+
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -moz-ms-flex: 1;
+    flex:1;
+}
+.WBh_chain_store li p{
+    font-size:.28rem;
+    color:#adadad;
+}
+.WBh_chain_store li p .icon{
+    font-size: .4rem;
+
+}
+.WBh_chain_store li p >span{
+    color:#f7b53c;
+}
+
+.WBh_content_footer ul.WBh_show{
+    width: 100%;
+    display:inline-block;
+    background: #fff;
+    border-top: 1px solid #dddddd;
+}
+.WBh_content_footer ul.WBh_show li{
+    width:29%;
+    float: left;
+    padding:2%;
+    max-height:3.5rem;
+    
+    overflow:hidden;
+}
+ 
+
+.WBh_content_footer ul.WBh_show li img{
+    width: 100%;
+     
+}
+.preview_picture{
+    width:100%;
+  /*   max-width:10rem; */
+
+    position: fixed;
+    z-index: 2000;
+/*     top:30%; */
+    top:0;
+  /*   left:5%; */
+
+}
+.preview_picture >div{
+    width:100%;
+    margin: 0 auto;
+ /*    max-width:10rem; */
+    height:6rem;
+    text-align:center;
+    position: relative;
+}
+.preview_picture >div .big_image{
+    width: 100%;
+
+    height:100%;
+    position: relative;
+}
+.preview_picture >div .big_image li{
+    position:absolute ;
+    width: 100%;
+	 height:100%;
+    overflow:hidden;
+	 background-color: #5F5A5A;
+	 
+}
+.preview_picture >div .big_image li:last-child{
+    z-index:1;
+}
+.preview_picture >div .big_image li img{
+	  display:inline;
+}
+.preview_picture span{
+    display: block;
+    position: absolute;
+    z-index:2001;
+    padding:.7rem .5rem;
+    cursor:pointer;
+    top:40%;
+}
+.preview_picture span.preview_left{
+    background:url("../images/small_background_icon.png") no-repeat -150px -332px;
+    background-size: 400px 400px;
+    left:0;
+}
+.preview_picture span.preview_right{
+    background:url("../images/small_background_icon.png") no-repeat -265px -332px;
+    background-size: 400px 400px;
+    right: 0;
+}
+@media (max-width: 440px) {
+ 
+  .moveCard .WBH-msg-center h1{
+  	font-size:1rem;
+  	line-height:2.3;
+  }
+}
+@media (max-width: 400px) {
+    .WBH-logo-location {
+        padding-right: 0.3rem;
+    }
+    .WBH-logo-msg p{
+        font-size: 0.28rem;
+    }
+    .WBH-logo-msg span {
+        font-size: 0.24rem;
+    }
+    .WBH-msg-time p{
+        font-size: 0.24rem;
+    }
+    .moveCard .WBH-msg-center h1{
+  		font-size:0.8rem;
+  		line-height:2.9;
+  	}
+}
+ 
+.user_PreDetails #bot-fixed-nav .box-flex{ border:0 !important; padding:0.05rem 0;}
+.user_PreDetails #bot-fixed-nav .box-flex a{ width:85%; height:0.9rem; line-height:0.9rem; margin-left:7.5%;border-radius:3px; padding:0; color:#ffffff; font-size:0.28rem;}
+.user_PreDetails #bot-fixed-nav .box-flex a.delete{ background-color:#ec3f28;}
+
+.user_PreDetails #bot-fixed-nav .box-flex a.give{ background-color:#1db915;}
+.user_PreDetails #bot-fixed-nav .box-flex a.useIt{ background-color:#f7b53c}
+
+.mar_4{
+    padding-top: 1rem;
+}
+
+
+

@@ -1,0 +1,942 @@
+/*卡券公用样式*/
+.cardBox {
+    width: auto;
+    height: 120px;
+    margin: 30px 10px;
+    position: relative;
+    background-color: #fffdf7;
+}
+
+ .cardBox .cardYy{
+     position: absolute;
+     background: url("../images/cardDemo.png") no-repeat center;
+     background-size: 100%;
+     z-index: 1;
+     width: 100%;
+     top: 80%;
+     
+     height: 1rem;
+  }
+/*.cardBox:before,*/
+/*.cardBox:after {*/
+    /*z-index: 1;*/
+    /*position: absolute;*/
+    /*content: "";*/
+    /*bottom: 15px;*/
+    /*left: 10px;*/
+    /*width: 50%;*/
+    /*top: 80%;*/
+    /*max-width: 300px;*/
+    /*box-shadow: 0 15px 10px rgba(203, 203, 203, 1);*/
+    /*-webkit-transform: rotate(-4deg);*/
+    /*transform: rotate(-4deg);*/
+/*}*/
+
+/*.cardBox:after {*/
+    /*-webkit-transform: rotate(4deg);*/
+    /*transform: rotate(4deg);*/
+    /*right: 10px;*/
+    /*left: auto;*/
+/*}*/
+
+.cardBox .cardCont {
+    position: relative;
+    z-index:2;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #fffdf7;
+}
+
+
+.cardBox .cardCont .cardleftInfo {
+    border: 1px solid #bae5da;
+    border-right: none;
+}
+
+/*卡券左边模块*/
+.cardBox .cardCont .cardleftInfo .cardPrice {
+    position: relative;
+    background: #47d4ad;
+    width: 120px;
+    min-width: 90px;
+    height: 100px;
+    overflow: hidden;
+    margin: 9px;
+}
+
+.cardBox .cardCont .cardleftInfo .cardPrice div.markBg {
+    position: absolute;
+    width: 150px;
+    height: 100px;
+    top: -35px;
+    left: -75px;
+    z-index: 1;
+    border-radius: 50%;
+    transform: rotate(-20deg);
+    -webkit-transform: rotate(-20deg);
+    background-color: #5ad8b5;
+}
+
+.cardBox .cardCont .cardleftInfo .cardPrice i.bingbeeBg {
+    position: absolute;
+    right: 0;
+    bottom: 17px;
+    z-index: 1;
+    font-size: 56px;
+    color: #43caa4;
+}
+
+.cardBox .cardCont .cardleftInfo .cardPrice div.roundBorder {
+    position: absolute;
+    width: 12px;
+    left: -6px;
+    z-index: 9;
+}
+
+.cardBox .cardCont .cardleftInfo .cardPrice div.roundBorder ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cardBox .cardCont .cardleftInfo .cardPrice div.roundBorder ul li {
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
+    background-color: #fffdf7;
+    list-style: none;
+    border-radius: 50%;
+}
+
+.cardBox .cardCont .cardleftInfo .cardPrice h2 {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    white-space: nowrap;
+    top: 24px;
+    left: 3px;
+    z-index: 9;
+    text-align: center;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.cardBox .cardCont .cardleftInfo .cardPrice h2 font {
+    font-size: 16px;
+}
+
+/*卡券中间模块*/
+.cardBox .cardCont .cardleftInfo .cardInfo {
+    padding: 15px 0;
+    height: auto;
+}
+
+.cardBox .cardCont .cardleftInfo .cardInfo h3,
+.cardBox .cardCont .cardleftInfo .cardInfo h4,
+.cardBox .cardCont .cardleftInfo .cardInfo p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #6a6a6a;
+    font-size: 18px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cardBox .cardCont .cardleftInfo .cardInfo h4 {
+    font-size: 16px;
+	color:#bebebe;
+}
+
+.cardBox .cardCont .cardleftInfo .cardInfo p {
+    font-size: 14px;
+    color: #bebebe;
+    margin-top: 5px;
+}
+
+/*卡券右边模块*/
+.cardBox .cardCont .cardStatus {
+    position: relative;
+    height:auto;
+    min-width: 100px;
+    margin-left: 20px;
+    border: 1px solid #bae5da;
+    border-left: none;
+}
+
+.cardBox .cardCont .cardStatus div.topRound {
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    width: 20px;
+    height: 10px;
+    background: #ffffff;
+    border-radius: 0 0 20px 20px;
+    border: 1px solid #bae5da;
+    border-top: none;
+    -webkit-border-radius: 0 0 20px 20px;;
+}
+
+.cardBox .cardCont .cardStatus div.bottomRound {
+    position: absolute;
+    bottom: -1px;
+    left: -20px;
+    width: 20px;
+    height: 10px;
+    border: 1px solid #bae5da;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    background-color: rgba(241,241,241,0.8);
+    z-index:99;
+}
+
+.cardBox .cardCont .cardStatus div.roundLine {
+    position: absolute;
+    left: -10px;
+    top: 0;
+    width: 1px;
+    height: 96px;
+    margin: 10px 0;
+    border-left: 1px dashed #bae5da;
+}
+
+.cardBox .cardCont .cardStatus b.status {
+    width:90%;
+    padding-top:26px;
+    height: 100%;
+    display: block;
+    text-align: center;
+}
+
+
+/*买单选择卡券*/
+
+.cardBox .cardCont .cardStatus b .icon{
+    font-size:1.4rem;
+    color:#47d4ad;
+}
+/*点击领取*/
+
+ .select .icon:before{
+     content:"\e632";
+}
+.draw .icon:before{
+     content:"\e6f0";
+ }
+/*点击买单*/
+.draw.active .icon:before{
+    content:"\e6f1";
+}
+/*惠*/
+.favour .icon:before{
+    content:"\e6ef";
+}
+/*过期*/
+.exceed .icon:before{
+    content:"\e6ee";
+}
+.exceed.active .icon:before{
+    content:"\e682";
+}
+.cardBox .cardCont .cardStatus b.status.exceed.active{
+    padding-top:20px;
+}
+/*添加行程*/
+.distance .icon:before{
+    content:"\e6f2";
+}
+.cardBox .cardCont .cardStatus b.select.active .icon:before{
+    content:"\e611";
+}
+.cardBox .cardCont .cardStatus b.select{
+   padding-top:20px;
+}
+/*颜色*/
+.orangeCardBox .cardCont .cardStatus b.status .icon{
+    color:#fa983a;
+}
+.redCardBox .cardCont .cardStatus b.status .icon{
+    color:#ff7171;
+}
+.grayCardBox .cardCont .cardStatus b.status .icon{
+    color:#d7d9d9;
+}
+.cardBox .cardCont .cardStatus b.status.deal {
+    background: url(../images/audit_incon.png) -4px -96px / 270px auto no-repeat;
+}
+
+.cardBox .cardCont .cardStatus b.status.fail {
+    background: url(../images/audit_incon.png) -94px -96px / 270px auto no-repeat;
+}
+
+.cardBox .cardCont .cardStatus b.status.pass {
+    background: url(../images/audit_incon.png) -186px -96px / 270px auto no-repeat;
+}
+
+/*卡券右边圆角边框*/
+.cardBox .cardCont .cardStatus .roundBorder-Right {
+    position: absolute;
+    right: -7px;
+    width: 12px;
+}
+
+.cardBox .cardCont .cardStatus .roundBorder-Right ul {
+    margin: 0;
+    padding: 0;
+}
+
+.cardBox .cardCont .cardStatus .roundBorder-Right ul li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    list-style: none;
+    border: 1px solid #bae5da;
+    background-color: #ffffff;
+    margin-top: 4px;
+}
+
+/*灰色卡券样式*/
+.cardBox.grayCardBox,
+.cardBox.grayCardBox .cardCont .cardleftInfo .cardPrice div.roundBorder ul li {
+    background-color: #f6f6f6;
+}
+
+.cardBox.grayCardBox .cardCont .cardleftInfo .cardPrice {
+    background-color: #d7d9d9;
+}
+
+.cardBox.grayCardBox .cardCont .cardleftInfo .cardPrice div.markBg {
+    background-color: #dbdddd;
+}
+
+.cardBox.grayCardBox .cardCont .cardleftInfo .cardPrice i.bingbeeBg {
+    color: #d1d1d1;
+}
+
+.cardBox.grayCardBox .cardCont .cardleftInfo,
+.cardBox.grayCardBox .cardCont .cardStatus,
+.cardBox.grayCardBox .cardCont .cardStatus .roundBorder-Right ul li,
+.cardBox.grayCardBox .cardCont .cardStatus div.topRound,
+.cardBox.grayCardBox .cardCont .cardStatus div.bottomRound,
+.cardBox.grayCardBox .cardCont .cardStatus div.roundLine {
+    border-color: #e5e5e5;
+}
+
+/*橙色卡券样式*/
+.cardBox.orangeCardBox,
+.cardBox.orangeCardBox .cardCont .cardleftInfo .cardPrice div.roundBorder ul li {
+    background-color: #fffdf7;
+}
+
+.cardBox.orangeCardBox .cardCont .cardleftInfo .cardPrice {
+    background-color: #fa983a;
+}
+
+.cardBox.orangeCardBox .cardCont .cardleftInfo .cardPrice div.markBg {
+    background-color: #fba34e;
+}
+
+.cardBox.orangeCardBox .cardCont .cardleftInfo .cardPrice i.bingbeeBg {
+    color: #f08a28;
+}
+.cardBox.orangeCardBox .cardCont .cardleftInfo,
+.cardBox.orangeCardBox .cardCont .cardStatus,
+.cardBox.orangeCardBox .cardCont .cardStatus .roundBorder-Right ul li,
+.cardBox.orangeCardBox .cardCont .cardStatus div.topRound,
+.cardBox.orangeCardBox .cardCont .cardStatus div.bottomRound,
+.cardBox.orangeCardBox .cardCont .cardStatus div.roundLine {
+    border-color: #f2decb;
+}
+
+/*红包卡券样式*/
+.cardBox.redCardBox,
+.cardBox.redCardBox .cardCont .cardleftInfo .cardPrice div.roundBorder ul li {
+    background-color: #fffdf7;
+}
+
+.cardBox.redCardBox .cardCont .cardleftInfo .cardPrice {
+    background-color: #ff7171;
+}
+
+.cardBox.redCardBox .cardCont .cardleftInfo .cardPrice div.markBg {
+    background-color: #ff7f7f;
+}
+
+.cardBox.redCardBox .cardCont .cardleftInfo .cardPrice i.bingbeeBg {
+    color: #f66666;
+}
+.cardBox.redCardBox .cardCont .cardleftInfo,
+.cardBox.redCardBox .cardCont .cardStatus,
+.cardBox.redCardBox .cardCont .cardStatus .roundBorder-Right ul li,
+.cardBox.redCardBox .cardCont .cardStatus div.topRound,
+.cardBox.redCardBox .cardCont .cardStatus div.bottomRound,
+.cardBox.redCardBox .cardCont .cardStatus div.roundLine {
+    border-color: #f9d2d2;
+}
+
+
+
+
+
+
+/**
+ * 卡券自适应
+ */
+@media only screen and (max-width: 640px ) {
+    .cardBox .cardCont .cardStatus b .icon{
+        font-size:1rem;
+    }
+    .cardBox {
+        height: 100px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice {
+        width: 100px;
+        min-width: 70px;
+        height: 79px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice div.markBg {
+        width: 120px;
+        height: 80px;
+        left: -50px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice i.bingbeeBg {
+        font-size: 45px;
+        bottom: 14px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice div.roundBorder {
+        width: 11px;
+        left: -5px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice div.roundBorder ul li {
+        width: 11px;
+        height: 11px;
+        margin-top: 4px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice h2 {
+        top: 18px;
+        left: 2px;
+        font-size: 38px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardInfo {
+        padding: 12px 0;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardInfo h3 {
+        font-size: 17px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardInfo h4 {
+        font-size: 15px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardInfo p {
+        font-size: 13px;
+        margin-top: 2px;
+    }
+
+    .cardBox .cardCont .cardStatus {
+        min-width: 80px;
+        margin-left: 15px;
+    }
+
+    .cardBox .cardCont .cardStatus div.topRound {
+        left: -15px;
+        width: 15px;
+        height: 8px;
+        border-radius: 0 0 15px 15px;
+        -webkit-border-radius: 0 0 15px 15px;
+    }
+
+    .cardBox .cardCont .cardStatus div.bottomRound {
+        left: -15px;
+        width: 15px;
+        height: 8px;
+        border-radius: 15px 15px 0 0;
+        -webkit-border-radius: 15px 15px 0 0;
+    }
+    .cardBox .cardCont .cardStatus div.roundLine {
+        left: -8px;
+        height: 76px;
+    }
+
+    .cardBox .cardCont .cardStatus b.status.selected span .iconfont{
+        font-size:.7rem;
+    }
+    .cardBox .cardCont .cardStatus b.status.deal {
+        background: url(../images/audit_incon.png) -7px -83px / 225px auto no-repeat;
+    }
+
+    .cardBox .cardCont .cardStatus b.status.fail {
+        background: url(../images/audit_incon.png) -82px -83px / 225px auto no-repeat;
+    }
+
+    .cardBox .cardCont .cardStatus b.status.pass {
+        background: url(../images/audit_incon.png) -158px -81px / 225px auto no-repeat;
+    }
+}
+
+
+@media only screen and (max-width: 450px ) {
+    .cardBox .cardCont .cardStatus b .icon {
+        font-size: 0.8rem;
+    }
+    .cardBox {
+        height: 80px;
+    }
+
+    .cardBox:before,
+    .cardBox:after {
+        bottom: 13px;
+        box-shadow: 0 14px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice {
+        width: 80px;
+        min-width: 60px;
+        height: 64px;
+        margin: 7px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice div.markBg {
+        width: 80px;
+        height: 70px;
+        left: -30px;
+        top: -30px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice i.bingbeeBg {
+        font-size: 36px;
+        bottom: 10px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice div.roundBorder {
+        width: 11px;
+        left: -5px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice div.roundBorder ul li {
+        width: 9px;
+        height: 8px;
+        margin-top: 4px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice h2 {
+        top: 12px;
+        left: 2px;
+        font-size: 30px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardPrice h2 font {
+        font-size: 13px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardInfo {
+        padding: 5px 0;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardInfo h3 {
+        font-size: 15px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardInfo h4 {
+        font-size: 13px;
+    }
+
+    .cardBox .cardCont .cardleftInfo .cardInfo p {
+        font-size: 12px;
+    }
+
+    .cardBox .cardCont .cardStatus {
+        min-width: 65px;
+        margin-left: 12px;
+    }
+
+    .cardBox .cardCont .cardStatus div.topRound {
+        left: -12px;
+        width: 12px;
+        height: 6px;
+        border-radius: 0 0 12px 12px;
+        -webkit-border-radius: 0 0 12px 12px;
+    }
+
+    .cardBox .cardCont .cardStatus div.bottomRound {
+        left: -12px;
+        width: 12px;
+        height: 6px;
+        border-radius: 12px 12px 0 0;
+        -webkit-border-radius: 12px 12px 0 0;
+    }
+
+    .cardBox .cardCont .cardStatus div.roundLine {
+        left: -7px;
+        height: 62px;
+        margin: 9px 0;
+    }
+
+    .cardBox .cardCont .cardStatus b.status{
+        padding-top:19px;
+    }
+    .cardBox .cardCont .cardStatus b.select {
+        padding-top: 14px;
+    }
+    .cardBox .cardCont .cardStatus b.status.exceed.active{
+        padding-top:15px;
+    }
+    .cardBox .cardCont .cardStatus b.status.selected span .iconfont{
+        font-size:.5rem;
+    }
+    .cardBox .cardCont .cardStatus b.status.deal {
+        background: url(../images/audit_incon.png) -6px -66px/175px auto no-repeat;
+    }
+
+    .cardBox .cardCont .cardStatus b.status.fail {
+        background: url(../images/audit_incon.png) -64px -66px / 175px auto no-repeat;
+    }
+
+    .cardBox .cardCont .cardStatus b.status.pass {
+        background: url(../images/audit_incon.png) -124px -64px / 175px auto no-repeat;
+    }
+
+    .cardBox .cardCont .cardStatus .roundBorder-Right {
+        right: -5px;
+        width: 10px;
+    }
+
+    .cardBox .cardCont .cardStatus .roundBorder-Right ul li {
+        width: 10px;
+        height: 10px;
+        margin-top: 5px;
+    }
+}
+@media only screen and (max-height: 550px ) {
+  .new_bg .cardBox{
+        margin:10px;
+    }
+}
+
+/*支付买单*/
+.no_paycard {
+    padding-bottom: 0;
+    font-size: .24rem;
+    color: #8f8f8f;
+    padding-top: 0.1rem;
+    text-align: center;
+}
+
+.no_paycard .icon{
+    font-size: 1.6rem;
+	color:#999;
+}
+.no_paycard span{
+    font-size: .3rem;
+    line-height:5;
+    display: block;
+	color:#999;
+}
+.pay_card {
+    width: 95%;
+    height: 4rem;
+    margin: 0 auto .5rem;
+}
+
+@media screen and (max-width:330px){
+	.no_paycard .icon{
+		font-size:1rem;
+	}
+}
+
+.pay_card:last-child {
+    margin-bottom: 0;
+}
+
+.payZ-coupon {
+    background: url("../images/card_images4.png") no-repeat center;
+    background-size: 100% 100%;
+    color: #397381;
+
+}
+
+.payD-coupon {
+    background: url("../images/card_images3.png") no-repeat center;
+    background-size: 100% 100%;
+    color: #7c723b;
+}
+
+.payD-Gqcoupon {
+    position: relative;
+    background: url("../images/card_images6.png") no-repeat center;
+    background-size: 100% 100%;
+    color: rgba(147, 147, 147, 0.67);
+}
+
+.payH-coupon {
+    background: url("../images/card_images5.png") no-repeat center;
+    background-size: 100% 100%;
+    color: #a13e1f;
+}
+
+.pay_card .pay_cardRight, .preferential_cardRight {
+    width: 23%;
+
+}
+
+.pay_cardLeft, .preferential_cardLeft {
+    padding: 0 4%;
+}
+
+.pay_cardL_top, .preferential_cardL_Top {
+    width: 100%;
+    padding-top: .3rem;
+    display: inline-block;
+}
+
+.pay_cardL_top .pay_cardL_topMony, .preferential_cardL_Top .preferential_cardTopMony {
+    float: left;
+    font-size: 2.2rem;
+    color: #fff;
+    position: relative;
+}
+
+.pay_cardL_top .pay_cardL_topMony > span, .preferential_cardL_Top .preferential_cardTopMony > span {
+    position: absolute;
+    top: 20%;
+    font-size: .38rem;
+    left: 100%;
+}
+
+.pay_cardL_top .pay_cardL_topCopon {
+    float: right;
+    font-size: .38rem;
+    width: .3rem;
+    padding-top: .4rem;
+    font-weight: bold;
+    line-height: .4rem;
+}
+
+.sellerC_top_cardLi {
+    line-height: 2;
+    font-size: .32rem;
+}
+
+.pay_cardRight > p {
+    margin: 0 auto 0;
+    width: .8rem;
+    height: .8rem;
+    border-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.pay_cardRight > p > input {
+    opacity: 0;
+    left: 0;
+    display: block;
+    width: .8rem;
+    height: .8rem;
+    top: 0;
+    position: absolute;
+}
+
+.pay_cardRight > p > .icon {
+    font-size: .6rem;
+    color: #fff;
+    line-height: 1.5;
+}
+
+.pay_cardRight > p > .icon_gray {
+    color: rgba(70, 65, 65, 0.96);
+}
+
+.pay_cardLeft .pay_cardL_bottom, .preferential_cardBottom {
+    font-size: .32rem;
+}
+
+.pay_cardLeft .pay_cardL_bottom > li, .preferential_cardBottom > li {
+    margin-bottom: .15rem;
+    line-height: 1.3;
+}
+
+.payZ-coupon .pay_cardRight > p {
+    background: #1e3a40;
+}
+
+.payD-coupon .pay_cardRight > p {
+
+    background: #3f3a1f;
+}
+
+.payH-coupon .pay_cardRight > p {
+    background: #512110;
+}
+
+.preferential_cardgq {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2rem;
+    border: 1px solid #696969;
+    text-align: center;
+    line-height: 3;
+    font-size: .3rem;
+    color: #696969;
+    right: 25%;
+    top: 5%;
+    position: absolute;
+    transform: rotate(10deg);
+    -ms-transform: rotate(10deg); /* IE 9 */
+    -moz-transform: rotate(10deg); /* Firefox */
+    -webkit-transform: rotate(10deg); /* Safari 和 Chrome */
+    -o-transform: rotate(10deg);
+}
+
+/*优惠卡包*/
+.gq_Bao .cardBox .cardCont .cardStatus div.topRound{
+    background:#f1f1f1;
+}
+.gq_Bao .cardBox .cardCont .cardStatus .roundBorder-Right ul li{
+    background:#f1f1f1;
+}
+.preferential_card {
+    width: 95%;
+    height: 4rem;
+    margin: 0 auto .5rem;
+}
+
+.preferential_card:last-child {
+    margin-bottom: 0;
+}
+
+.preferential_cardL_Top .preferential_cardTopMony {
+    width: 100%;
+    text-align: center;
+}
+
+.preferential_cardL_Top .preferential_cardTopMony > span {
+    left: auto;
+}
+
+.preferential_cardRight .preferential_card_topCopon {
+    width: .5rem;
+    display: block;
+    font-size: .6rem;
+    position: relative;
+    line-height: 1.5;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.preferential_cardName {
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    font-size: .36rem;
+}
+
+.preferential_cardNb {
+    font-style: normal;
+    padding: 2px 3px;
+    border: 1px solid #fff;
+    border-radius: .05rem;
+    font-size: .2rem;
+}
+
+.surprise_close a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    /*border: 1px solid red;*/
+    position: absolute;
+    z-index: 9999;
+    right: 2%;
+}
+.introducing_bao{
+    background:#fff;
+    padding-top:.4rem;
+ 
+}
+.no_guoqi span{
+    display: inline;
+    color:#2ab9c8;
+}
+/*end*/
+@media (max-width: 525px) {
+    .pay_cardL_top .pay_cardL_topMony, .preferential_cardL_Top .preferential_cardTopMony {
+        font-size: 1.8rem;
+    }
+
+    .pay_cardL_top .pay_cardL_topCopon {
+        padding-top: .2rem;
+    }
+}
+
+@media (max-width: 478px) {
+    .pay_cardL_top .pay_cardL_topMony, .preferential_cardL_Top .preferential_cardTopMony {
+        font-size: 1.6rem;
+    }
+
+    .pay_cardL_top .pay_cardL_topCopon {
+        font-size: .32rem;
+    }
+
+    .pay_card, .preferential_card {
+        height: 3.5rem;
+    }
+
+    .pay_cardLeft .pay_cardL_bottom, .preferential_cardBottom {
+        font-size: .28rem;
+    }
+
+    .preferential_cardRight .preferential_card_topCopon {
+        font-size: .5rem;
+    }
+}
+
+@media (max-width: 432px) {
+    .pay_cardL_top .pay_cardL_topMony, .preferential_cardL_Top .preferential_cardTopMony {
+        font-size: 1rem;
+    }
+
+    .pay_cardL_top .pay_cardL_topCopon {
+        font-size: .3rem;
+        line-height: 1.1;
+        padding-top: 0;
+    }
+
+    .pay_card, .preferential_card {
+        height: 2.5rem;
+    }
+
+    .pay_cardLeft .pay_cardL_bottom, .preferential_cardBottom {
+        font-size: .24rem;
+    }
+
+    .pay_cardL_top, .preferential_cardL_Top {
+        padding-top: 3%;
+    }
+
+    .preferential_cardRight .preferential_card_topCopon {
+        font-size: .4rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+

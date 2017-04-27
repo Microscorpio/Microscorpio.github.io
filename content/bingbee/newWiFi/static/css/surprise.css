@@ -1,0 +1,110 @@
+.demo{
+    position: fixed;
+    width: 100%;
+    height:100%;
+    top: 0px;
+    left: 0px;
+}
+.surprise_close{
+    width:.8rem;
+    height:.8rem;
+    position: absolute;
+    z-index: 222222;
+    top:0;
+    right:4%;
+}
+.surprise_bg{
+    background: url("../images/11.png") no-repeat center;
+    background-size:100%  100% ;
+    position: absolute;
+    text-align: center;
+
+    width:100%;
+    /*min-width:4rem;*/
+    /*max-width:10rem;*/
+    z-index: 999;
+}
+.surprise_bg  h3{
+    font-size:.3rem;
+    color: #4c4c4c;
+    text-align: center;
+    padding:0 0 .3rem;
+}
+.surprise_bg .new_bg{
+    position: absolute;
+    width:90%;
+    /*max-width:10rem;*/
+    /*min-width:4.5rem;*/
+}
+.surprise_bg .pay_card{
+
+    margin-top: 2%;
+}
+.receive_btn{
+    height:1.5rem;
+    background:url("../images/receive.png") no-repeat center;
+    background-size: 100% 100%;
+    width:90%;
+    /*height:30%;*/
+    color: #fff;
+    border: none;
+    text-align: center;
+    line-height: 2;
+    font-size:.5rem;
+    font-weight: bold;
+    bottom:3%;
+    position: absolute;
+    left:5%;
+}
+.pay_cardLeft .pay_cardL_bottom >li, .preferential_cardBottom >li{
+    text-align: left;
+}
+.new_bg .cardBox .cardCont .cardStatus div.topRound{
+    background:#f65c5a;
+}
+.new_bg .cardBox .cardCont .cardStatus .roundBorder-Right ul li{
+    background:#f65c5a;
+
+}
+.cardBox .cardCont .cardStatus div.bottomRound{
+    background:#ca3634;
+}
+.cardBox{
+  margin: 0 0 10%;
+}
+.cardBox .cardYy{
+    background: url(../images/card_demo.png) no-repeat center;
+    background-size:contain;
+}
+
+
+@media (max-width:590px) {
+    .receive_btn{
+        height: 1.2rem;
+    }
+}
+@media (max-width:438px) {
+    .surprise_bg .new_bg{
+        width:95%;
+    }
+
+}
+@media (max-width: 350px) {
+    .pay_cardL_top, .preferential_cardL_Top {
+        padding-top:4%;
+    }
+    .pay_cardL_top .pay_cardL_topMony {
+        font-size: 0.7rem;
+    }
+    .pay_cardL_top .pay_cardL_topCopon{
+        font-size: .2rem;
+    }
+    .pay_card, .preferential_card {
+        height:1.7rem;
+    }
+    .pay_cardLeft .pay_cardL_bottom >li, .preferential_cardBottom >li{
+        line-height:1.2;
+        margin-bottom:0;
+
+    }
+}

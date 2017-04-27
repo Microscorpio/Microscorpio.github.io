@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<title>地图</title>
+<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=l8SPqXwbofd72YppXinE7xjd"></script>-->
+</head>
+
+<body>
+<!-- 遮罩层 -->
+<div class="mask" id="check-mask" style="display:none;"></div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+        </div>
+        <h1 class="header-header">窝边惠</h1>
+        <div class="header-wrap-right">
+        	<a href="javascript:;"></a>
+        </div>
+    </header>
+</div>
+<!-- 头部 end  -->
+<div class="content_all" style="padding-bottom: 0">
+	<div class="divLine_1REM"></div>
+    <div class="mapCont">
+    	<div class="mapSearch">
+        	<i class="icon iconfont" onclick="search()">&#xe62d;</i>
+		    <input id="keyword" type="text" placeholder="搜索或输入地址" size="20"/>
+        </div>
+        <div class="box_city" style="top:0.9rem;">
+            <h3>
+                历史记录
+            </h3>
+            <ul class="taoYHS_history_title">
+                <li>
+                    <a href="#">香天下老火锅【天府店】</a>
+                </li>
+            </ul>
+            <div class="dd_input">
+                <input type="button" value="清空历史记录" class="taoTh_empty"/>
+            </div>
+        </div>
+        <div class="map_image" id="allmap"></div>
+        <div class="mapInfo d_box">
+            <div class="mapInfoMsg d_flex">
+            	<p>1234</p>
+                <p>55555</p>
+            </div>
+            <a href="javascript:;" class="btn btn_confirm">确定</a>
+        </div>
+    </div>
+    
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	var winWidth=$(window).height();
+    var topHeight=$(".divLine_1REM").height();
+    $(".map_image").height(winWidth-topHeight+"px");
+	
+	
+	$("#keyword").focus(function(){
+		//if(!$(this).val()){
+		//	$(".box_city").slideUp();
+		//}else{
+			$(".box_city").slideDown();
+			$("#check-mask").show();
+		//}
+	});
+	$(".box_city").mouseenter(function(){
+		$("#keyword").unbind("blur",get_blur);
+	});
+	$(".box_city").mouseleave(function(){
+		$("#keyword").bind("blur",get_blur);
+	});
+	
+	$("#check-mask").click(function(){
+		$("#check-mask").hide();
+		$(".box_city").slideUp();
+		});
+});
+function get_blur(){
+	$(".box_city").slideUp();
+}
+</script>
+</html>

@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><!-- 设置文档宽度、是否缩放 -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no"/><!-- 禁止数字识别为电话号码 -->
+    <title>买单</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/card.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/pay.css" />
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <script type="text/javascript" src="static/js/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="static/js/pullScroll.js"></script>
+    <script type="text/javascript" src="static/js/pay.js"></script>
+</head>
+<body>
+
+
+<!--选择商家弹出框-->
+<div class="select_seller displayNone" >
+    <h3 class="selctSeller_h3">
+        请选择商家
+    </h3>
+    <div class="selctSeller_content">
+        <ul>
+            <li class="active">环球中心海洋公园</li>
+            <li>环球中心海洋公园</li>
+            <li>环球中心海洋公园</li>
+        </ul>
+    </div>
+    <div class="selctSeller_btn">
+        <input type="button" value="确定"/>
+    </div>
+    <div class="selctSeller_text">
+        <h5>温馨提示：</h5>
+        <p>
+            若没有你要选择的商家，请通过扫描二维码买单
+        </p>
+    </div>
+</div>
+
+<!-- 遮罩层 -->
+<div class="mask displayNone" id="check-mask"  ></div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <a class="react back" href="index.html">首页</a>
+        </div>
+        <h1 class="header-header">福满多自助火锅</h1>
+        <div class="header-wrap-right">
+            <a href="javascript:;"><i class="icon iconfont" id="seller">&#xe603;</i></a>
+        </div>
+    </header>
+    <!--消费金额-->
+    <!--隔离top层 height:1rem-->
+    <div class="divLine_1REM"></div>
+    <div class="pay_money">
+        <p class="d_box payM_import">
+            <label class="" for="">金额</label>
+            <input class="d_flex" type="text" value="300"/>
+        </p>
+        <h3 nth="0">
+            <i class="iconfont icon">&#xe685;</i>
+            <span>
+                添加不可优惠金额
+            </span>
+        </h3>
+        <div class="payM_subtraction ">
+            <p class="d_box">
+                <label class="" for="">金额</label>
+                <input class="d_flex" type="text" value="300"/>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- 头部 end  -->
+<!--优惠券-->
+<!--隔离top层 height:1rem-->
+<div class="divLine_1REM"></div>
+<div class="divLine_1d5REM" style="display: none"></div>
+<!--end-->
+<div class="content_all no_paycard">
+
+    <p>
+        <i class="icon iconfont">&#xe616;</i>
+       <span>
+            感谢你使用wifi惠买单！
+       </span>
+    </p>
+</div>
+
+
+
+ <!---->
+<!--<div class="content_all">-->
+   <!--<h3 class="pay_h3">-->
+       <!--优惠券-->
+   <!--</h3>-->
+    <!--&lt;!&ndash;买单选择折扣券&ndash;&gt;-->
+    <!--<div class="cardBox">-->
+        <!--<div class="d_box cardCont">-->
+            <!--<div class="d_flex mui-clearfix cardleftInfo">-->
+                <!--<div class="cardPrice f_l">-->
+                    <!--<div class="markBg"></div>-->
+                    <!--<i class="iconfont bingbeeBg">&#xe6df;</i>-->
+                    <!--<div class="roundBorder">-->
+                        <!--<ul>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<h2>2<font>折</font></h2>-->
+                <!--</div>-->
+                <!--<div class="cardInfo">-->
+                    <!--<h3>卡券名称</h3>-->
+                    <!--<h4>满150元减20元</h4>-->
+                    <!--<p>使用期限：2015.10.10至2015.11.11</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="cardStatus">-->
+                <!--<div class="topRound"></div>-->
+                <!--<div class="bottomRound"></div>-->
+                <!--<div class="roundLine"></div>-->
+                <!--<div class="roundBorder-Right">-->
+                    <!--<ul>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<b class="status select active">-->
+                    <!--<i class="icon iconfont"></i>-->
+                <!--</b>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;选择优惠券&ndash;&gt;-->
+    <!--<div class="cardBox orangeCardBox">-->
+        <!--<div class="d_box cardCont">-->
+            <!--<div class="d_flex mui-clearfix cardleftInfo">-->
+                <!--<div class="cardPrice f_l">-->
+                    <!--<div class="markBg"></div>-->
+                    <!--<i class="iconfont bingbeeBg">&#xe6df;</i>-->
+                    <!--<div class="roundBorder">-->
+                        <!--<ul>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<h2>20<font>元</font></h2>-->
+                <!--</div>-->
+                <!--<div class="cardInfo">-->
+                    <!--<h3>卡券名称</h3>-->
+                    <!--<h4>满150元减20元</h4>-->
+                    <!--<p>使用期限：2015.10.10至2015.11.11</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="cardStatus">-->
+                <!--<div class="topRound"></div>-->
+                <!--<div class="bottomRound"></div>-->
+                <!--<div class="roundLine"></div>-->
+                <!--<div class="roundBorder-Right">-->
+                    <!--<ul>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<b class="status select">-->
+                    <!--<i class="iconfont icon">-->
+                        <!---->
+                    <!--</i>-->
+                <!--</b>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->
+
+<!--&lt;!&ndash;红包&ndash;&gt;-->
+<!--<div class="content_all">-->
+    <!--<h3 class="pay_h3">-->
+        <!--红包（可累加使用）-->
+    <!--</h3>-->
+    <!--&lt;!&ndash;选择红包&ndash;&gt;-->
+    <!--<div class="cardBox redCardBox">-->
+        <!--<div class="d_box cardCont">-->
+            <!--<div class="d_flex mui-clearfix cardleftInfo">-->
+                <!--<div class="cardPrice f_l">-->
+                    <!--<div class="markBg"></div>-->
+                    <!--<i class="iconfont bingbeeBg">&#xe6df;</i>-->
+                    <!--<div class="roundBorder">-->
+                        <!--<ul>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<h2>20<font>元</font></h2>-->
+                <!--</div>-->
+                <!--<div class="cardInfo">-->
+                    <!--<h3>卡券名称</h3>-->
+                    <!--<h4>满150元减20元</h4>-->
+                    <!--<p>使用期限：2015.10.10至2015.11.11</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="cardStatus">-->
+                <!--<div class="topRound"></div>-->
+                <!--<div class="bottomRound"></div>-->
+                <!--<div class="roundLine"></div>-->
+                <!--<div class="roundBorder-Right">-->
+                    <!--<ul>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<b class="status select">-->
+                    <!--<i class="iconfont icon">-->
+                        <!---->
+                    <!--</i>-->
+                <!--</b>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash;选择红包&ndash;&gt;-->
+    <!--<div class="cardBox redCardBox">-->
+        <!--<div class="d_box cardCont">-->
+            <!--<div class="d_flex mui-clearfix cardleftInfo">-->
+                <!--<div class="cardPrice f_l">-->
+                    <!--<div class="markBg"></div>-->
+                    <!--<i class="iconfont bingbeeBg">&#xe6df;</i>-->
+                    <!--<div class="roundBorder">-->
+                        <!--<ul>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                            <!--<li></li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                    <!--<h2>20<font>元</font></h2>-->
+                <!--</div>-->
+                <!--<div class="cardInfo">-->
+                    <!--<h3>卡券名称</h3>-->
+                    <!--<h4>满150元减20元</h4>-->
+                    <!--<p>使用期限：2015.10.10至2015.11.11</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="cardStatus">-->
+                <!--<div class="topRound"></div>-->
+                <!--<div class="bottomRound"></div>-->
+                <!--<div class="roundLine"></div>-->
+                <!--<div class="roundBorder-Right">-->
+                    <!--<ul>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                        <!--<li></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+                <!--<b class="status select">-->
+                    <!--<i class="iconfont icon">-->
+                        <!---->
+                    <!--</i>-->
+                <!--</b>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    <!--</div>-->
+<!--</div>-->
+<!--隔离top层 height:2rem-->
+<!--<div class="divLine_1d5REM"></div>-->
+<!-- 底部 2015.10.21 start wqx-Update -->
+<footer class="footer">
+    <div class="pay_footer box-flex">
+        <p class="d_flex">
+            应付金额 <span>￥200</span>
+        </p>
+        <input type="button" value="支付"/>
+    </div>
+</footer>
+<!-- 底部 end -->
+</body>
+<script>
+
+$(function(){
+    var winH=$(window).height();
+    var winW=$(window).width();
+    $(".select_seller").css({
+        "top":winH/2-$(".select_seller").height()/2+"px",
+        "left":winW/2-$(".select_seller").width()/2+"px"
+    });
+   $("#check-mask").click(function(){ $(".select_seller").hide();});
+    $("#seller").click(function(){ $(".select_seller").show();$("#check-mask").show(); });
+
+//    没有优惠券的时候
+  $(".no_paycard").height(winH-($(".no_paycard").offset().top+$(".divLine_2REM").height()+10)+"px");
+    $(".no_paycard p").css({
+        "marginTop":$(".no_paycard").height()/3+"px",
+        "textAlign":"center"
+    });
+});
+
+</script>
+
+
+</html>

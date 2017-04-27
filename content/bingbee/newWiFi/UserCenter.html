@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"/><!-- 禁止数字识别为电话号码 -->
+<title>个人中心</title>
+<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="static/css/myCenter.css" />
+</head>
+
+<body>
+<div class="content_all">
+	<!--==================头部===================-->
+    <!--已登录-->
+	<!--<div class="user_top">-->
+        <!--<p>-->
+            <!--<b class="head_logo">-->
+                <!--<img src="static/images/errorImg.png" alt=""/>-->
+            <!--</b>-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--<span>隔壁老王</span>-->
+            <!--<span>15281039758</span>-->
+        <!--</p>-->
+
+	<!--</div>-->
+    <!--未登录-->
+    <div class="user_top">
+        <p>
+            <!--未登录-->
+            <b class="head_logo">
+                <i class="iconfont icon">&#xe624;</i>
+            </b>
+        </p>
+        <p>
+            <a href="#">请点击登录</a>
+        </p>
+
+    </div>
+
+
+	<div class="bao_kinds d_box">
+		<div class="d_flex">
+            <a href="favorites.html" >
+                <i class="icon iconfont">&#xe639;</i>
+                <b>收藏夹</b>
+            </a>
+        </div>
+        <div class="d_flex">
+            <a href="introducing_bao.html">
+                <i class="icon iconfont">&#xe631;</i>
+                <b>优惠卡包</b>
+            </a>
+        </div>
+    </div>
+
+    <!--======================中间列表====================-->
+    <div class="user_content">
+        <ul>
+            <li>
+                <a class="d_box" href="userCenterInfo.html">
+                    <i class="icon iconfont">&#xe63a;</i>
+                    <span>基本资料</span>
+                    <p class="d_flex"><i class="icon iconfont">&#xe68f;</i></p>
+                </a>
+            </li>
+            <li>
+                <a class="d_box" href="addStroke.html">
+                    <i class="icon iconfont">&#xe63b;</i>
+                    <span>我的行程足迹</span>
+                    <p class="d_flex"><i class="icon iconfont">&#xe68f;</i></p>
+                </a>
+            </li>
+            <li>
+                <a class="d_box" href="javascript:;">
+                    <i class="icon iconfont">&#xe638;</i>
+                    <span>优惠记录</span>
+                    <!--已经登录-->
+                    <div class="userMoney">
+                        <span>近一月您共消费<b>&yen;1</b></span>
+                        <span>为您节约<b>&yen;1</b></span>
+                    </div>
+                    <!--end-->
+                    <p class="d_flex"><i class="icon iconfont">&#xe68f;</i></p>
+                </a>
+            </li>
+            <li>
+                <a class="d_box" href="addStroke.html">
+                    <i class="icon iconfont">&#xe675;</i>
+                    <span>意见反馈</span>
+                    <p class="d_flex"><i class="icon iconfont">&#xe68f;</i></p>
+                </a>
+            </li>
+            <li>
+                <a class="d_box" href="addStroke.html">
+                    <i class="icon iconfont">&#xe64d;</i>
+                    <span>我是商家</span>
+                    <p class="d_flex"><i class="icon iconfont">&#xe68f;</i></p>
+                </a>
+            </li>
+            <!--已登录-->
+            <li class="exit_btu">
+                    <input type="button" value="退出登录"/>
+            </li>
+            <!--end-->
+        </ul>
+    </div>
+
+</div>
+<!-- 底部 2015.10.21 start wqx-Update -->
+<footer class="footer">
+    <div id="bot-fixed-nav" class="d_box">
+        <div class="d_flex active ">
+            <a class="nav gard1" href="javascript:;">
+                <i class="icon iconfont"></i>
+                <p>首页</p>
+            </a>
+        </div>
+        <div class="d_flex ">
+            <a class="nav gard2" href="javascript:;">
+                <i class="icon iconfont"></i>
+                <p>买单</p>
+            </a>
+        </div>
+        <div class="d_flex ">
+            <a class="nav gard3" href="UserCenter.html">
+                <i class="icon iconfont"></i>
+                <p>我的</p>
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

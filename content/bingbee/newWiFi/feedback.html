@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css" />
+    <link rel="stylesheet" href="static/css/myCenter.css"/>
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+</head>
+<body>
+<!-- 遮罩层 -->
+<div class="mask" id="check-mask" style="display:none;"></div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <!--<a class="home" href="javascript:history.back()">返回</a>--><!--旧架构，现已合并-->
+        </div>
+        <h1 class="header-header">意见反馈</h1>
+        <div class="header-wrap-right">
+            <a href="javascript:;">提交</a>
+        </div>
+    </header>
+</div>
+<div class="divLine_1REM"></div>
+<!-- 头部 end  -->
+<div class="content_all">
+    <div class="feedback_text">
+        <textarea name="" id="feedback_textarea" id="" cols="30" maxlength="300" rows="10"  placeholder="请写下您宝贵的意见或建议，您的每句话我们都将倾听!"></textarea>
+        <p class="feedback_textNum">
+            <span>0</span>
+                 /
+            <span>300</span>
+        </p>
+    </div>
+    <div class="feedback_input">
+        <input type="tel" placeholder="请输入您的联系方式（邮箱/手机）"/>
+    </div>
+</div>
+
+
+
+</body>
+<script>
+   $(function(){
+        $("#feedback_textarea").keyup(function(){
+            var textNum=$(this).val().length;
+                if(textNum<=300){
+
+                    $(".feedback_textNum span:first-child").html(textNum);
+                }
+
+        });
+   });
+
+</script>
+</html>

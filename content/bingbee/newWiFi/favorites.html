@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<title>搜索列表页</title>
+<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+
+</head>
+
+<body>
+<!-- 遮罩层 -->
+<div class="mask" id="check-mask" style="display:none;"></div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <!--<a class="home" href="javascript:history.back()">返回</a>--><!--旧架构，现已合并-->
+        </div>
+        <h1 class="header-header">收藏夹</h1>
+        <div class="header-wrap-right">
+        	<a href="javascript:;"></a>
+        </div>
+    </header>
+    
+</div>
+<!-- 头部 end  -->
+<div class="home_footer content_all" data-role="page" id="pageone">
+    <div class="divLine_1REM"></div>
+    <dl>
+        <dd>
+            <a href="seller_card.html">
+                <div class="homeF_content d_box">
+                    <p class="homeF_sculpture">
+                        <img src="static/images/initlogo.png" alt=""/>
+                    </p>
+                    <ul class="homeF_right d_flex">
+                        <li class="homeF_headline ">
+                            <p class="homeF_headline_title">
+                                <b >福满多自助火锅</b>
+                                <em>
+                                    火锅
+                                </em>
+                                <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                            </p>
+                            <p class="homeF_headline_content">
+                                <span>建设北路三段11号付8-9</span>
+                            </p>
+
+                        </li>
+
+                        <li class="homeF_onLine">
+                            <p>
+                                <i class="icon iconfont">&#xe684;</i>
+                                <span>当前在线：25</span>
+                            </p>
+                            <p>
+                                <span>历史在线：2531</span>
+                            </p>
+                            <strong>500m</strong>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+            <div class="deleteIt">
+                <span>删除</span>
+            </div>
+        </dd>
+        <dd>
+            <a href="seller_card.html">
+                <div class="homeF_content d_box">
+                    <p class="homeF_sculpture">
+                        <img src="static/images/initlogo.png" alt=""/>
+                    </p>
+                    <ul class="homeF_right d_flex">
+                        <li class="homeF_headline ">
+                            <p class="homeF_headline_title">
+                                <b >福满多自助火锅</b>
+                                <em>
+                                    火锅
+                                </em>
+                                <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                            </p>
+                            <p class="homeF_headline_content">
+                                <span>建设北路三段11号付8-9</span>
+                            </p>
+
+                        </li>
+
+                        <li class="homeF_onLine">
+                            <p>
+                                <i class="icon iconfont">&#xe684;</i>
+                                <span>当前在线：25</span>
+                            </p>
+                            <p>
+                                <span>历史在线：2531</span>
+                            </p>
+                            <strong>500m</strong>
+                        </li>
+                    </ul>
+                </div>
+            </a>
+            <div class="deleteIt">
+                <span>删除</span>
+            </div>
+        </dd>
+    </dl>
+    <!--没有数据显示-->
+    <div class="content_all noData">
+        <h2><i class="icon iconfont">&#xe622;</i></h2>
+        <p>未找到相关的商家信息！</p>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/jquery.mobile-1.4.5.min.js"></script>
+<script>
+$(document).on("pageinit","#pageone",function(){
+	$(".home_footer dl").on("swipeleft","dd",function(){
+		$(this).find(".deleteIt").show().animate({right:"0"},200);
+	});
+	$(".home_footer dl").on("swiperight","dd",function(){
+		$(this).find(".deleteIt").show().animate({right:"-1.8rem"},200);
+	});
+});
+$(document).scroll(function(){
+	var _scroll = document.documentElement.scrollTop || document.body.scrollTop;
+	var _height = document.documentElement.scrollHeight || document.body.scrollHeight;
+	if($(window).height()+_scroll > _height - 50){
+		$(".home_footer dl").append("<dd>1</dd>");
+	}
+});
+$(function(){
+	$(".home_footer dl dd div.deleteIt").bind("tap",function(){
+		alert(123)
+		});
+	})
+</script>
+</html>

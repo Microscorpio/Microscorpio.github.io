@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><!-- 设置文档宽度、是否缩放 -->
+    <meta name="format-detection" content="telephone=no"/><!-- 禁止数字识别为电话号码 -->
+    <title>首页</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/card.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/surprise.css" />
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <script type="text/javascript" src="static/js/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="static/js/pullScroll.js"></script>
+</head>
+<body>
+ <div class="content_all">
+     <!--关闭-->
+      <p class="surprise_close">
+          <a href="#">
+          </a>
+      </p>
+     <!--内容-->
+     <div class="surprise_bg">
+         <div class="new_bg">
+             <ul>
+                 <li>
+                     <!--选择红包-->
+                     <div class="cardBox redCardBox">
+                         <p class="cardYy"></p>
+                         <div class="d_box cardCont">
+                             <div class="d_flex mui-clearfix cardleftInfo">
+                                 <div class="cardPrice f_l">
+                                     <div class="markBg"></div>
+                                     <i class="iconfont bingbeeBg">&#xe6df;</i>
+                                     <div class="roundBorder">
+                                         <ul>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                         </ul>
+                                     </div>
+                                     <h2>20<font>元</font></h2>
+                                 </div>
+                                 <div class="cardInfo">
+                                     <h3>红包</h3>
+                                     <h4>满150元抵扣20元</h4>
+                                     <p>有效期至：2015.11.11</p>
+                                 </div>
+                             </div>
+                             <div class="cardStatus">
+                                 <div class="topRound"></div>
+                                 <div class="bottomRound"></div>
+                                 <div class="roundLine"></div>
+                                 <div class="roundBorder-Right">
+                                     <ul>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                     </ul>
+                                 </div>
+                                 <b class="status favour">
+                                     <i class="iconfont icon">
+
+                                     </i>
+                                 </b>
+                             </div>
+                         </div>
+
+                     </div>
+                 </li>
+                 <li>
+                     <!--买单选择折扣券-->
+                     <div class="cardBox">
+                         <p class="cardYy"></p>
+                         <div class="d_box cardCont">
+                             <div class="d_flex mui-clearfix cardleftInfo">
+                                 <div class="cardPrice f_l">
+                                     <div class="markBg"></div>
+                                     <i class="iconfont bingbeeBg">&#xe6df;</i>
+                                     <div class="roundBorder">
+                                         <ul>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                             <li></li>
+                                         </ul>
+                                     </div>
+                                     <h2>2<font>折</font></h2>
+                                 </div>
+                                 <div class="cardInfo">
+                                     <h3>商家名称商家名称</h3>
+                                     <h4>满150元打5.5折</h4>
+                                     <p>有效期至：2015.11.11</p>
+                                 </div>
+                             </div>
+                             <div class="cardStatus">
+                                 <div class="topRound"></div>
+                                 <div class="bottomRound"></div>
+                                 <div class="roundLine"></div>
+                                 <div class="roundBorder-Right">
+                                     <ul>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                         <li></li>
+                                     </ul>
+                                 </div>
+                                 <b class="status favour">
+                                     <i class="iconfont icon">
+
+                                     </i>
+                                 </b>
+                             </div>
+                         </div>
+
+                     </div>
+                 </li>
+
+
+             </ul>
+
+         </div>
+         <input type="button" value="领取"   class="receive_btn"/>
+     </div>
+ </div>
+</body>
+<script>
+    $(function(){
+//         计算位置
+        var winW=$(window).width();
+        var winH=$(window).height();
+//        var bgH=$(".surprise_bg").height();
+        var bgW=$(".surprise_bg").width();
+        if(winH>=430){
+            $(".surprise_bg").css({
+                "height":winH+"px"
+            });
+        }else{
+            $(".surprise_bg").css({
+                "height":420+"px"
+            });
+        }
+
+        if(winH<=432){
+            $(".surprise_bg .new_bg").css({
+                "top":winH*(1/2.8)+"px",
+                "left":(bgW/2)-($(".surprise_bg .new_bg").width()/2)+"px"
+            });
+        }else if(winH<=462){
+            $(".surprise_bg .new_bg").css({
+                "top":winH*(1/2.6)+"px",
+                "left":(bgW/2)-($(".surprise_bg .new_bg").width()/2)+"px"
+            });
+        }else if(winH<=500){
+            $(".surprise_bg .new_bg").css({
+                "top":winH*(1/2.5)+"px",
+                "left":(bgW/2)-($(".surprise_bg .new_bg").width()/2)+"px"
+            });
+        }
+        else if(winH<=558){
+            $(".surprise_bg .new_bg").css({
+                "top":winH*(1/2.3)+"px",
+                "left":(bgW/2)-($(".surprise_bg .new_bg").width()/2)+"px"
+            });
+        }
+        else{
+            $(".surprise_bg .new_bg").css({
+                "top":winH*(1/2.2)+"px",
+                "left":(bgW/2)-($(".surprise_bg .new_bg").width()/2)+"px"
+            });
+        }
+
+
+    })
+
+</script>
+</html>

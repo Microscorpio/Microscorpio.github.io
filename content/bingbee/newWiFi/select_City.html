@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<title>选择城市</title>
+</head>
+<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<body>
+<!-- 遮罩层 -->
+<div class="mask" id="check-mask" style="display:none;"></div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <!--<a class="home" href="javascript:history.back()">返回</a>--><!--旧架构，现已合并-->
+        </div>
+        <h1 class="header-header">选择城市</h1>
+        <div class="header-wrap-right">
+        	<a href="javascript:;"></a>
+        </div>
+    </header>
+</div>
+<!-- 头部 end  -->
+<div class="content_all">
+    <div class="wrap-white-pad">
+        <form id="search-form">
+            <div class="search-wrap">
+                <i class="icon iconfont icon-search">&#xe62d;</i>
+                <input id="keyword" type="text" name="w" placeholder="请输入城市名或拼音" autocomplete="off" value="">
+            </div>
+        </form>
+        <div class="box_city">
+            <h3>
+                历史记录
+            </h3>
+            <ul class="taoYHS_history_title">
+                <li>
+                    <a href="#">香天下老火锅【天府店】</a>
+                </li>
+            </ul>
+            <div class="dd_input">
+                <input type="button" value="清空历史记录" class="taoTh_empty"/>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container" id="city">
+        <div class="wrap-white">
+            <h2 class="list-title-botbor">
+                热门城市
+                <span class="now-city f_r">当前城市: <span >成都</span></span>
+            </h2>
+            <div class="wrap hot-city">
+                <div class="box">
+                    <a class="city active">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都成都都都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都成都</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="wrap-white">
+            <h2 class="list-title-botbor">排序字母</h2>
+            <div class="wrap city-letter">
+    
+                <div class="box">
+                    <a class="letter active">A</a>
+                </div>
+                <div class="box">
+                    <a class="letter">B</a>
+                </div>
+                <div class="box">
+                    <a class="letter">C</a>
+                </div>
+                <div class="box">
+                    <a class="letter">D</a>
+                </div>
+                <div class="box">
+                    <a class="letter">E</a>
+                </div>
+                <div class="box">
+                    <a class="letter">F</a>
+                </div>
+                <div class="box">
+                    <a class="letter">G</a>
+                </div>
+                <div class="box">
+                    <a class="letter">H</a>
+                </div>
+                <div class="box">
+                    <a class="letter">I</a>
+                </div>
+                <div class="box">
+                    <a class="letter">J</a>
+                </div>
+                <div class="box">
+                    <a class="letter">K</a>
+                </div>
+                <div class="box">
+                    <a class="letter">L</a>
+                </div>
+                <div class="box">
+                    <a class="letter">M</a>
+                </div>
+                <div class="box">
+                    <a class="letter">N</a>
+                </div>
+                <div class="box">
+                    <a class="letter">O</a>
+                </div>
+                <div class="box">
+                    <a class="letter">P</a>
+                </div>
+                <div class="box">
+                    <a class="letter">Q</a>
+                </div>
+                <div class="box">
+                    <a class="letter">R</a>
+                </div>
+                <div class="box">
+                    <a class="letter">S</a>
+                </div>
+                <div class="box">
+                    <a class="letter">T</a>
+                </div>
+                <div class="box">
+                    <a class="letter">U</a>
+                </div>
+                <div class="box">
+                    <a class="letter">V</a>
+                </div>
+                <div class="box">
+                    <a class="letter">W</a>
+                </div>
+                <div class="box">
+                    <a class="letter">X</a>
+                </div>
+                <div class="box">
+                    <a class="letter">Y</a>
+                </div>
+                <div class="box">
+                    <a class="letter">Z</a>
+                </div>
+            </div>
+            <div class="wrap city-letter">
+                <div class="box">
+                    <a class="letter active">A</a>
+                </div>
+            </div>
+            <div class="wrap hot-city">
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都成都都都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+            </div>
+            <div class="wrap city-letter">
+                <div class="box">
+                    <a class="letter active">B</a>
+                </div>
+            </div>
+            <div class="wrap hot-city">
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都成都都都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+                <div class="box">
+                    <a class="city">成都</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        $("#keyword").keyup(function(){
+            if(!$(this).val()){
+                $(".box_city").slideUp();
+            }else{
+                $(".box_city").slideDown();
+            }
+        });
+        $(".box_city").mouseenter(function(){
+            $("#keyword").unbind("blur",get_blur);
+        });
+        $(".box_city").mouseleave(function(){
+            $("#keyword").bind("blur",get_blur);
+        });
+    });
+    function get_blur(){
+        $(".box_city").slideUp();
+    }
+</script>
+</html>

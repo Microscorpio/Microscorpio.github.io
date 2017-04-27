@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><!-- 设置文档宽度、是否缩放 -->
+<meta name="format-detection" content="telephone=no"/><!-- 禁止数字识别为电话号码 -->
+<title>首页</title>
+<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/TouchSlide.1.1.js"></script>
+<script type="text/javascript" src="static/js/pullScroll.js"></script>
+</head>
+<style>
+.header-header{padding-right:0.2rem; position: relative; overflow: inherit !important;}
+.header-header > input{ width:100%; padding-left:0; text-indent: 1em;}
+.header-header > i{ right:0; margin-right:0.2rem;}
+</style>
+<body onload="loaded()">
+<!-- 遮罩层 -->
+<div class="mask" id="check-mask" style="display:none;"></div>
+<!--首页提示-->
+ <div class="index-prompt">
+     <p class="index-promptTitle">
+        <i class="iconfont icon">&#xe689;</i>
+         <span>
+             温馨提示：你有两张未使用的优惠券即将过期！
+         </span>
+     </p>
+     <p class="index-promptLook">
+         <a href="#">查看详情&gt;&gt; </a>
+     </p>
+ </div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="select_City.html"><i class="icon iconfont">&#xe604;</i>成都</a>
+            <!--<a class="home" href="javascript:history.back()">返回</a>--><!--旧架构，现已合并-->
+        </div>
+        <h1 class="header-header">
+        	<i class="iconfont" onclick="search();resetSelector();">&#xe62d;</i>
+	        <input data-role="none" type="text" name="keyword" placeholder="输入商家名称/产品标签/卡券名称" />
+        </h1>
+        <div class="header-wrap-right">
+            <a class="react back"  style="min-width: .5rem"> </a>
+        </div>
+    </header>
+    <!--搜索历史-->
+    <div class="searchHistory searchBox">
+    	<div class="searchListCont">
+        	<h3>搜索历史</h3>
+            <ul>
+            	<li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+            </ul>
+            <p class="clearSearch"><a href="javascript:;">清空历史</a></p>
+        </div>
+    </div>
+    <!--搜索列表-->
+    <div class="searchList searchBox">
+    	<div class="searchListCont">
+        	<h3>相关搜索</h3>
+            <ul>
+            	<li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 头部 end  -->
+
+<div class="content_all wrapperCommon" id="wrapper">
+	<div class="iScrollCommon">
+        <!--隔离top层 height:1rem-->
+        <div class="divLine_1REM"></div>
+
+        <!-- 广告图 2015.10.21 start wqx-Update -->
+        <div id="slideBox" class="slideBox">
+            <div class="bd">
+                <ul>
+                    <li>
+                        <a class="pic" href="javascript:;"><img src="static/images/1b.jpg" /></a>
+                    </li>
+                    <li>
+                        <a class="pic" href="javascript:;"><img src="static/images/2b.jpg"/></a>
+                    </li>
+                    <li>
+                        <a class="pic" href="javascript:;"><img src="static/images/3b.jpg"/></a>
+                    </li>
+                    <li>
+                        <a class="pic" href="javascript:;"><img src="static/images/4b.jpg"/></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hd">
+                <ul></ul>
+            </div>
+        </div>
+        <!-- 焦点图 end -->
+        <div class="home_header">
+            <!--分类-->
+            <ul class="taoYh_header">
+                <li>
+                    <a href="searchList.html">
+                        <p class="taoYh_dining"><i class="icon iconfont">&#xe636;</i></p>
+                        <span>餐饮美食</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="searchList.html">
+                        <p class="taoYh_arder"><i class="icon iconfont">&#xe618;</i></p>
+                        <span>休闲娱乐</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="searchList.html">
+                        <p class="taoYh_life"><i class="icon iconfont">&#xe629;</i></p>
+                        <span>生活服务</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="searchList.html">
+                        <p class="taoYh_beauty"><i class="icon iconfont">&#xe630;</i></p>
+                        <span>丽人</span>
+                    </a>
+                </li>
+            </ul>
+        
+        </div>
+
+        
+        <!--窝边惠 start-->
+        <div class="home_center">
+            <ul class="homeC_hui d_box">
+                
+                <li class="d_flex">
+                    <a href="addStroke.html" class="ui-link">
+                        <p class="homeC_icon icon_go xing_left"></p>
+                        <div class="homeC_title">
+                            <h4> 行程惠 </h4>
+                            <span> 行程线路优惠</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="d_flex">
+                    <a href="cloudList.html" class="ui-link">
+                        <p class="homeC_icon icon_cloud xing_right"></p>
+                        <div class="homeC_title icon_cloud_title">
+                            <h4> 云生活 </h4>
+                            <span>数据分析推荐</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!--窝边惠 end-->
+        
+        <div class="home_footer">
+            <h4>
+               <i class="icon iconfont">&#xe639;</i>
+                猜你喜欢
+            </h4>
+            <ul>
+                <li>
+                    <a href="seller_card.html">
+                        <div class="homeF_content d_box">
+                            <p class="homeF_sculpture">
+                                <img src="static/images/initlogo.png" alt=""/>
+                            </p>
+                            <ul class="homeF_right d_flex">
+                                <li class="homeF_headline ">
+                                    <p class="homeF_headline_title">
+                                        <b >福满多自助火锅福满多自助火锅福满多自助火锅</b>
+                                        <em>
+                                            火锅
+                                        </em>
+                                        <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                                    </p>
+                                    <p class="homeF_headline_content">
+                                        <span>建设北路三段11号付8-9</span>
+                                    </p>
+
+                                </li>
+
+                                <li class="homeF_onLine">
+                                    <p>
+                                        <i class="icon iconfont">&#xe684;</i>
+                                        <span>当前在线：25</span>
+                                    </p>
+                                    <p>
+                                        <span>历史在线：2531</span>
+                                    </p>
+                                    <strong>500m</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="seller_card.html">
+                        <div class="homeF_content d_box">
+                            <p class="homeF_sculpture">
+                                <img src="static/images/initlogo.png" alt=""/>
+                            </p>
+                            <ul class="homeF_right d_flex">
+                                <li class="homeF_headline ">
+                                    <p class="homeF_headline_title">
+                                        <b >福满多自助火锅</b>
+                                        <em>
+                                            火锅
+                                        </em>
+                                        <strong class="homeF_headline_right homeD"><s>&yen;</s>85<span>抵</span></strong>
+                                    </p>
+                                    <p class="homeF_headline_content">
+                                        <span>建设北路三段11号付8-9</span>
+                                    </p>
+
+                                </li>
+
+                                <li class="homeF_onLine">
+                                    <p>
+                                        <i class="icon iconfont">&#xe684;</i>
+                                        <span>当前在线：25</span>
+                                    </p>
+                                    <p>
+                                        <span>历史在线：2531</span>
+                                    </p>
+                                    <strong>500m</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="seller_card.html">
+                        <div class="homeF_content d_box">
+                            <p class="homeF_sculpture">
+                                <img src="static/images/initlogo.png" alt=""/>
+                            </p>
+                            <ul class="homeF_right d_flex">
+                                <li class="homeF_headline ">
+                                    <p class="homeF_headline_title">
+                                        <b >福满多自助火锅</b>
+                                        <em>
+                                            火锅
+                                        </em>
+                                        <strong class="homeF_headline_right homeD"><s>&yen;</s>85<span>抵</span></strong>
+                                    </p>
+                                    <p class="homeF_headline_content">
+                                        <span>建设北路三段11号付8-9</span>
+                                    </p>
+
+                                </li>
+
+                                <li class="homeF_onLine">
+                                    <p>
+                                        <i class="icon iconfont">&#xe684;</i>
+                                        <span>当前在线：25</span>
+                                    </p>
+                                    <p>
+                                        <span>历史在线：2531</span>
+                                    </p>
+                                    <strong>500m</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="seller_card.html">
+                        <div class="homeF_content d_box">
+                            <p class="homeF_sculpture">
+                                <img src="static/images/initlogo.png" alt=""/>
+                            </p>
+                            <ul class="homeF_right d_flex">
+                                <li class="homeF_headline ">
+                                    <p class="homeF_headline_title">
+                                        <b >福满多自助火锅</b>
+                                        <em>
+                                            火锅
+                                        </em>
+                                        <strong class="homeF_headline_right homeD"><s>&yen;</s>85<span>抵</span></strong>
+                                    </p>
+                                    <p class="homeF_headline_content">
+                                        <span>建设北路三段11号付8-9</span>
+                                    </p>
+
+                                </li>
+
+                                <li class="homeF_onLine">
+                                    <p>
+                                        <i class="icon iconfont">&#xe684;</i>
+                                        <span>当前在线：25</span>
+                                    </p>
+                                    <p>
+                                        <span>历史在线：2531</span>
+                                    </p>
+                                    <strong>500m</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="seller_card.html">
+                        <div class="homeF_content d_box">
+                            <p class="homeF_sculpture">
+                                <img src="static/images/initlogo.png" alt=""/>
+                            </p>
+                            <ul class="homeF_right d_flex">
+                                <li class="homeF_headline ">
+                                    <p class="homeF_headline_title">
+                                        <b >福满多自助火锅</b>
+                                        <em>
+                                            火锅
+                                        </em>
+                                        <strong class="homeF_headline_right homeD"><s>&yen;</s>85<span>抵</span></strong>
+                                    </p>
+                                    <p class="homeF_headline_content">
+                                        <span>建设北路三段11号付8-9</span>
+                                    </p>
+
+                                </li>
+
+                                <li class="homeF_onLine">
+                                    <p>
+                                        <i class="icon iconfont">&#xe684;</i>
+                                        <span>当前在线：25</span>
+                                    </p>
+                                    <p>
+                                        <span>历史在线：2531</span>
+                                    </p>
+                                    <strong>500m</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="seller_card.html">
+                        <div class="homeF_content d_box">
+                            <p class="homeF_sculpture">
+                                <img src="static/images/initlogo.png" alt=""/>
+                            </p>
+                            <ul class="homeF_right d_flex">
+                                <li class="homeF_headline ">
+                                    <p class="homeF_headline_title">
+                                        <b >福满多自助火锅</b>
+                                        <em>
+                                            火锅
+                                        </em>
+                                        <strong class="homeF_headline_right homeD"><s>&yen;</s>85<span>抵</span></strong>
+                                    </p>
+                                    <p class="homeF_headline_content">
+                                        <span>建设北路三段11号付8-9</span>
+                                    </p>
+
+                                </li>
+
+                                <li class="homeF_onLine">
+                                    <p>
+                                        <i class="icon iconfont">&#xe684;</i>
+                                        <span>当前在线：25</span>
+                                    </p>
+                                    <p>
+                                        <span>历史在线：2531</span>
+                                    </p>
+                                    <strong>500m</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> 
+
+<!-- 底部 2015.10.21 start wqx-Update -->
+<footer class="footer">
+    <div id="bot-fixed-nav" class="d_box">
+        <div class="d_flex active ">
+            <a class="nav gard1" href="javascript:;">
+                <i class="icon iconfont"></i>
+                <p>首页</p>
+            </a>
+        </div>
+        <div class="d_flex ">
+            <a class="nav gard2" href="javascript:;">
+                <i class="icon iconfont"></i>
+                <p>买单</p>
+            </a>
+        </div>
+        <div class="d_flex ">
+            <a class="nav gard3" href="UserCenter.html">
+                <i class="icon iconfont"></i>
+                <p>我的</p>
+            </a>
+        </div>
+    </div>
+</footer>
+<!-- 底部 end -->
+</body>
+<script type="text/javascript">
+
+var h = $(window).height();
+$("#wrapper").css("height",h-60);
+var myScroll;
+function loaded () {
+	myScroll = new iScroll('wrapper',{vScrollbar:false});
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+$(function(){
+	TouchSlide({ 
+		slideCell:"#slideBox",
+		titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+		mainCell:".bd ul", 
+		effect:"leftLoop", 
+		autoPage:true,//自动分页
+		autoPlay:true //自动播放
+	});
+    prompt();
+});
+
+  function prompt(){
+      $(".index-prompt").slideDown();
+      setTimeout(function(){
+          $(".index-prompt").slideUp();
+      },3000)
+  }
+
+
+
+
+</script>
+</html>

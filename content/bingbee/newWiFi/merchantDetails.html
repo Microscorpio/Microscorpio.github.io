@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"/><!-- 禁止数字识别为电话号码 -->
+<title>商家卡券</title>
+<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="static/css/seller_card.css" />
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<body class="bodyBgColor">
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <a class="react back" href="index.html">首页</a>
+        </div>
+        <h1 class="header-header">商家详情</h1>
+        <div class="header-wrap-right">
+        	<a href="javascript:;"></a>
+            <a href="javascript:;"></a>
+        </div>
+    </header>
+</div>
+<!-- 头部 end  -->
+<div class="content_all">
+	<div class="divLine_1REM"></div>
+	<div class="merchantDetails">
+    	<p class="detailsMsg">测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据测试数据</p>
+    </div>
+</div>
+</body>
+<script type="text/javascript">
+$(function(){
+	//预设内容高度
+	var winWidth=$(window).height();
+    var topHeight=$(".divLine_1REM").height();
+    $(".merchantDetails").css("min-height",winWidth-topHeight+"px");
+	});
+</script>
+</html>

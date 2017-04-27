@@ -1,0 +1,221 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><!-- 设置文档宽度、是否缩放 -->
+    <meta name="format-detection" content="telephone=no"/><!-- 禁止数字识别为电话号码 -->
+    <title>买单</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/card.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/pay.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/seller_card.css" />
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <script type="text/javascript" src="static/js/TouchSlide.1.1.js"></script>
+    <script type="text/javascript" src="static/js/pullScroll.js"></script>
+
+</head>
+<body>
+
+
+
+<!-- 遮罩层 -->
+<div class="mask displayNone" id="check-mask"  ></div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <a class="react back" href="index.html">首页</a>
+        </div>
+        <h1 class="header-header">买单</h1>
+        <div class="header-wrap-right">
+        	<a href="javascript:;"></a>
+            <a href="javascript:;">关闭</a>
+        </div>
+    </header>
+    <!--消费金额-->
+
+</div>
+<!-- 头部 end  -->
+<div class="success_box">
+    <!--成功-->
+   <div>
+       <div class="pay_greenYuan">
+           <i class="icon iconfont">&#xe619;</i>
+       </div>
+
+       <h3 class="succ_p">支付成功</h3>
+       <h4 class="succ_p2">本次支付金额 <span class="color_withe"></span>元</h4>
+       <div class="box_towD">
+           <input type="button" value="继续逛逛" onclick="toIndex();" class="pay_guang ">
+           <input type="button" value="分享红包" onclick="toIndex();" class="pay_guang ">
+       </div>
+   </div>
+   <!--失败-->
+   <!--<div>-->
+       <!--<div class="pay_greenYuan">-->
+           <!--<i class="icon iconfont">&#xe6dc;</i>-->
+       <!--</div>-->
+       <!--<h3 class="succ_p">支付失败</h3>-->
+       <!--<div class="box_towD">-->
+           <!--<input type="button" value="重新支付" class="pay_guang" onclick="topay();" >-->
+       <!--</div>-->
+   <!--</div>-->
+
+</div>
+<!--为你推荐-->
+<div class="success_recommend content_all">
+    <h3>
+        <i class="icon iconfont"> &#xe6dd;</i>
+        为你推荐
+    </h3>
+    <div class="content_all home_footer">
+        <ul>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeD"><s>&yen;</s>85<span>抵</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeD"><s>&yen;</s>85<span>抵</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <!--&lt;!&ndash;点击进入商家详情&ndash;&gt;-->
+        <!--<a class="WBH-to-details clearfix d_box" href="map.html">-->
+            <!--<div class="WBH-logo-img">-->
+                <!--<img src="static/images/initlogo.png" width="50px" height="50px">-->
+            <!--</div>-->
+            <!--<div class="WBH-logo-msg d_flex">-->
+                <!--<p>福满多自助火锅</p>-->
+                <!--<span>建设北路三段11号附8-9</span>-->
+            <!--</div>-->
+            <!--<div class="WBH-logo-location">-->
+                <!--<p>火锅</p>-->
+                <!--<span><i class="icon iconfont yel">&#xe6c4;</i>500m</span>-->
+            <!--</div>-->
+            <!--<div class="WBH-logo-return">-->
+                <!--<i class="icon iconfont">&#xe695;</i>-->
+            <!--</div>-->
+        <!--</a>-->
+    </div>
+
+ <!--0.8的隔离层-->
+   <div class="divLine_d8REM"> </div>
+</div>
+
+
+
+
+
+<!--<!-- 底部 2015.10.21 start wqx-Update -->
+<!--<footer class="footer">-->
+    <!--<div class="pay_footer box-flex">-->
+        <!--<p class="d_flex">-->
+            <!--应付金额 <span>￥200</span>-->
+        <!--</p>-->
+        <!--<input type="button" value="支付"/>-->
+    <!--</div>-->
+<!--</footer>-->
+<!--<!-- 底部 end -->
+
+</body>
+</html>

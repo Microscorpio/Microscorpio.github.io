@@ -1,0 +1,145 @@
+/*头部商家信息*/
+.WBH-to-details{ width:100%;  padding:0.1rem 0;  border:0.02rem solid #dbdbdb; border-left:none; border-right:none; background:#ffffff;  }
+.WBH-logo-img{ overflow:hidden; padding:0.02rem; margin:0 0.1rem;width: 15%; height: 15%;min-width: .8rem; max-width: 1.3rem;}
+.WBH-logo-msg{ width:90%; color:#000; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.WBH-logo-msg p{ font-size:0.3rem; line-height:2;}
+.WBH-logo-msg span,.WBH-logo-location p{ color:#adadad; font-size:0.24rem;}
+.WBH-logo-location p{ text-align:right;}
+.WBH-logo-location{ padding-top:0.2rem;}
+.WBH-logo-location span{ color:#2ab9c8; display:inline-block; font-size:0.24rem; line-height:1; }
+.WBH-logo-location span i.icon{ font-size:0.32rem; color:#2ab9c8;}
+.WBH-logo-return{ padding-top:0.3rem;}
+.WBH-logo-return i.icon{ color:#adadad; font-size:0.32rem;}
+.WBH-logo-location,.WBH-logo-return{ padding-right:0.1rem;}
+
+/*商家详情*/
+.seller_details,.seller_explain{
+    width: 100%;
+    background: #fff;
+	margin-bottom:0.2rem;
+}
+.seller_details .seller_detailsSpan{
+    display: block;
+    width:2rem;
+	color:#333;
+    text-align: center;
+    font-size: .28rem;
+    line-height:2;
+}
+.seller_details .seller_detailsSpan i.icon{
+    font-size: .45rem;
+    color: #2fd0e1;
+
+}
+.seller_details .seller_detailsP{
+    text-align: right;
+    line-height: 2.4;
+    font-size:.24rem;
+    color: #898989;
+	padding-right:0.1rem;
+ }
+.seller_details .seller_detailsP i.icon{
+	font-size:0.4rem;
+	}
+/*商家详情2*/
+.seller_explain{
+    padding:.4rem .2rem;
+    width: auto;
+}
+
+.seller_explain .sellerE_p{
+    font-size: .32rem;
+    line-height:2;
+}
+.seller_explain .sellerE_span{
+
+    font-size:.26rem;
+    color: #898989;
+	line-height: 1.5;
+}
+
+
+/*商家详情描述*/
+.merchantDetails{ width:auto; height:100%; background-color:#fff;}
+.merchantDetails p.detailsMsg{ line-height:2; padding:0 0.2rem; font-size:0.24rem; color:#333;}
+.card_contentAll{
+    padding-top: 3px;
+
+    border-bottom: 1px solid #e1e1e1;
+}
+.card_contentAll .cardBox .cardCont .cardStatus .roundBorder-Right ul li{
+    background-color:#f1f1f1;
+}
+.card_contentAll .cardBox .cardCont .cardStatus div.topRound{
+    background-color:#f1f1f1;
+}
+/*商家图片展示*/
+.merchantDetails ul.merchantImg_show{
+    width: 100%;
+    display:inline-block;
+    background: #fff;
+    border-top: 1px solid #dddddd;
+}
+.merchantDetails ul.merchantImg_show li{
+    width:29%;
+    float: left;
+    padding:2%;
+    max-height:3.5rem;
+    overflow:hidden;
+}
+ 
+.merchantDetails ul.merchantImg_show li img{
+    width: 100%;
+}
+.preview_picture{
+    width:100%;
+    position: fixed;
+    z-index: 2000;
+    top:0;
+
+}
+.preview_picture >div{
+    width:100%;
+    margin: 0 auto;
+    height:6rem;
+    text-align:center;
+    position: relative;
+}
+.preview_picture >div .big_image{
+    width: 100%;
+
+    height:100%;
+    position: relative;
+}
+.preview_picture >div .big_image li{
+    position:absolute ;
+    width: 100%;
+	 height:100%;
+    overflow:hidden;
+	 background-color: #5F5A5A;
+	 
+}
+.preview_picture >div .big_image li:last-child{
+    z-index:1;
+}
+.preview_picture >div .big_image li img{
+	  display:inline;
+}
+.preview_picture span{
+    display: block;
+    position: absolute;
+    z-index:2001;
+    padding:.7rem .5rem;
+    cursor:pointer;
+    top:40%;
+}
+.preview_picture span.preview_left{
+    background:url("../images/small_background_icon.png") no-repeat -150px -332px;
+    background-size: 400px 400px;
+    left:0;
+}
+.preview_picture span.preview_right{
+    background:url("../images/small_background_icon.png") no-repeat -265px -332px;
+    background-size: 400px 400px;
+    right: 0;
+}

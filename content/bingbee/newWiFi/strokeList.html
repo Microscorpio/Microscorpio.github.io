@@ -1,0 +1,442 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<meta name="format-detection" content="telephone=no"/>
+<title>搜索列表页</title>
+<link rel="stylesheet" type="text/css" href="static/css/base.css" />
+<link rel="stylesheet" type="text/css" href="static/css/index.css" />
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/common.js"></script>
+<script type="text/javascript" src="static/js/pullScroll.js"></script>
+</head>
+<style>
+/*重构css样式（样式有差异）*/
+.header-header{ overflow:inherit !important;}
+.header-header input{ width:100%; position:relative;}
+.header-header i{ position:absolute; right:1rem;}
+</style>
+<body onload="loaded()">
+<!-- 遮罩层 -->
+<div class="mask" id="check-mask" style="display:none;"></div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <!--<a class="home" href="javascript:history.back()">返回</a>--><!--旧架构，现已合并-->
+        </div>
+        <h1 class="header-header">
+        	<i class="iconfont" onclick="search();resetSelector();">&#xe62d;</i>
+	        <input data-role="none" type="text" name="keyword" placeholder="输入商家名称/产品标签/卡券名称" />
+        </h1>
+        <div class="header-wrap-right">
+        	<a href="javascript:;" class="selectMap"><i class="icon iconfont">&#xe601;</i></a>
+        </div>
+    </header>
+    <!--搜索历史-->
+    <div class="searchHistory searchBox">
+    	<div class="searchListCont">
+        	<h3>搜索历史</h3>
+            <ul>
+            	<li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+            </ul>
+            <p class="clearSearch"><a href="javascript:;">清空历史</a></p>
+        </div>
+    </div>
+    <!--搜索列表-->
+    <div class="searchList searchBox">
+    	<div class="searchListCont">
+        	<h3>相关搜索</h3>
+            <ul>
+            	<li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+                <li>测试数据</li>
+            </ul>
+        </div>
+    </div>
+    <div class="content_all">
+        <div class="Menu">
+            <!--隔离top层 height:1rem-->
+            <div class="divLine_1REM"></div>
+            <ul id="top-menu">
+                <li><span>选择类别</span><i class="icon iconfont">&#xe68a;</i></li>
+                <li><span>选择距离</span><i class="icon iconfont">&#xe68a;</i></li>
+            </ul>
+            <div id="top-menu-wrap">
+                <div class="menu-content" >
+                    <div class="menu-sub-meu wrapperCommon" style="display:block" id="wrapper">
+                        <div class="menuList iScrollCommon" style="width:100%">
+                            <ul id="sencondMenu" class="menu-li">
+                               <li class="active">
+                                   全部分类
+                                   <div>
+                                       <span>13245</span>
+                                       <i class="icon iconfont">&#xe68f;</i>
+                                   </div>
+                               </li>
+                               <li>
+                                   餐饮美食
+                                   <div>
+                                       <span>13245</span>
+                                       <i class="icon iconfont">&#xe68f;</i>
+                                   </div>
+                               </li>
+                               <li>
+                                   休闲娱乐
+                                   <div>
+                                       <span>13245</span>
+                                       <i class="icon iconfont">&#xe68f;</i>
+                                   </div>
+                               </li>
+                               <li>
+                                   购物商店
+                                   <div>
+                                       <span>13245</span>
+                                       <i class="icon iconfont">&#xe68f;</i>
+                                   </div>
+                               </li>
+                               <li>
+                                   购物商店
+                                   <div>
+                                       <span>13245</span>
+                                       <i class="icon iconfont">&#xe68f;</i>
+                                   </div>
+                               </li>
+                               <li>
+                                   购物商店
+                                   <div>
+                                       <span>13245</span>
+                                       <i class="icon iconfont">&#xe68f;</i>
+                                   </div>
+                               </li>
+                               <li>
+                                   购物商店
+                                   <div>
+                                       <span>13245</span>
+                                       <i class="icon iconfont">&#xe68f;</i>
+                                   </div>
+                               </li>
+                           </ul>
+                       </div>
+                    </div>
+                    <div class="menu-sub-meu-wrap">
+                           <div class="sub-menu-content wrapperCommon" style="display:block;" id="wrapper2">
+                                <div class="scList iScrollCommon">
+                                   <ul class="menu-li">
+                                       <li><a href="#">全部分类1<span>13245</span></a></li>
+                                       <li><a href="#">全部分类2<span>13245</span></a></li>
+                                       <li><a href="#">全部分类3<span>13245</span></a></li>
+                                       <li><a href="#">全部分类4<span>13245</span></a></li>
+                                       <li><a href="#">全部分类5<span>13245</span></a></li>
+                                       <li><a href="#">全部分类2<span>13245</span></a></li>
+                                       <li><a href="#">全部分类3<span>13245</span></a></li>
+                                       <li><a href="#">全部分类4<span>13245</span></a></li>
+                                       <li><a href="#">全部分类5<span>13245</span></a></li>
+                                       <li><a href="#">全部分类2<span>13245</span></a></li>
+                                       <li><a href="#">全部分类3<span>13245</span></a></li>
+                                       <li><a href="#">全部分类4<span>13245</span></a></li>
+                                       <li><a href="#">全部分类5<span>13245</span></a></li>
+                                   </ul>
+                               </div>
+                          </div>
+                          <div class="sub-menu-content wrapperCommon" style="display:block;" id="wrapper6">
+                              <div class="scList iScrollCommon">
+                                   <ul class="menu-li">
+                                       <li><a href="#">全部分类11<span>13245</span></a></li>
+                                       <li><a href="#">全部分类12<span>13245</span></a></li>
+                                       <li><a href="#">全部分类13<span>13245</span></a></li>
+                                       <li><a href="#">全部分1类4<span>13245</span></a></li>
+                                       <li><a href="#">全部分类115<span>13245</span></a></li>
+                                       <li><a href="#">全部分1类2<span>13245</span></a></li>
+                                       <li><a href="#">全部分14<span>13245</span></a></li>
+                                       <li><a href="#">全部分1类5<span>13245</span></a></li>
+                                       <li><a href="#">全部分11类2<span>13245</span></a></li>
+                                       <li><a href="#">全部分1类3<span>13245</span></a></li>
+                                       <li><a href="#">全部分1类4<span>13245</span></a></li>
+                                       <li><a href="#">全部分类5<span>13245</span></a></li>
+                                   </ul>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+               <div class="menu-content wrapperCommon" id="wrapper4">
+                   <div class="iScrollCommon aloneList">
+                       <ul class="menu-li">
+                           <li>1000m</li>
+                           <li>3000m</li>
+                           <li>5000m</li>
+                           <li>10km</li>
+                           <li>10km以上</li>
+                       </ul>
+                   </div>
+               </div>
+            </div>
+            <div class="closeMenu">
+                <i class="icon iconfont">&#xe69c;</i>
+                <i class="icon iconfont">&#xe69c;</i>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 头部 end  -->
+<div class="home_footer content_all wrapperCommon" id="wrapper5">
+	<div class="iScrollCommon">
+        <div class="divLine_1REM"></div>
+        <div class="divLine_7REM"></div>
+        <ul>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="seller_card.html">
+                    <div class="homeF_content d_box">
+                        <p class="homeF_sculpture">
+                            <img src="static/images/initlogo.png" alt=""/>
+                        </p>
+                        <ul class="homeF_right d_flex">
+                            <li class="homeF_headline ">
+                                <p class="homeF_headline_title">
+                                    <b >福满多自助火锅</b>
+                                    <em>
+                                        火锅
+                                    </em>
+                                    <strong class="homeF_headline_right homeZ">8.5<span>折</span></strong>
+                                </p>
+                                <p class="homeF_headline_content">
+                                    <span>建设北路三段11号付8-9</span>
+                                </p>
+
+                            </li>
+
+                            <li class="homeF_onLine">
+                                <p>
+                                    <i class="icon iconfont">&#xe684;</i>
+                                    <span>当前在线：25</span>
+                                </p>
+                                <p>
+                                    <span>历史在线：2531</span>
+                                </p>
+                                <strong>500m</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <!--没有数据显示-->
+        <div class="content_all noData">
+            <h2><i class="icon iconfont">&#xe622;</i></h2>
+            <p>未找到相关的商家信息！</p>
+        </div>
+        <!--没有网络-->
+        <div class="content_all noNetwork">
+            <h2><i class="icon iconfont">&#xe623;</i></h2>
+            <p>网络不给力，客官你还在地球吗？</p>
+            <a href="#">重试</a>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+var h = $(window).height();
+ $("#wrapper5").css("height",h-40);
+var myScroll,myScroll2,myScroll3,myScroll4,myScroll5,myScroll6;
+function loaded () {
+	myScroll = new iScroll('wrapper',{vScrollbar:false});
+	myScroll2 = new iScroll('wrapper2',{vScrollbar:false});
+	myScroll4 = new iScroll('wrapper4',{vScrollbar:false});
+	myScroll5 = new iScroll('wrapper5',{vScrollbar:false});
+	myScroll6 = new iScroll('wrapper6');
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+</script>
+</html>

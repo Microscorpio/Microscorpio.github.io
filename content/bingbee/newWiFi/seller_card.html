@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;" charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"><!-- 设置文档宽度、是否缩放 -->
+    <meta name="format-detection" content="telephone=no"/><!-- 禁止数字识别为电话号码 -->
+    <title>商家卡券</title>
+    <link rel="stylesheet" type="text/css" href="static/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/seller_card.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/card.css" />
+    <script type="text/javascript" src="static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <script type="text/javascript" src="static/js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+<!-- 遮罩层 -->
+<div class="mask" id="check-mask" style="display:none;"></div>
+<!-- 头部 2015.10.21 start wqx-Update -->
+<div class="top">
+    <header class="header">
+        <div class="header-wrap-left">
+            <a class="react back" href="javascript:history.back()"><i class="icon iconfont">&#xe644;</i>返回</a>
+            <a class="react back" href="index.html">首页</a>
+        </div>
+        <h1 class="header-header">商家优惠</h1>
+        <div class="header-wrap-right">
+        	<a href="javascript:;"></a>
+        	<!--收藏成功后 给 i 标签添加yel样式，并更换字体代码为&#xe610;-->
+            <a href="javascript:;" class="collect active "><i class="icon iconfont "></i></a>
+        </div>
+    </header>
+</div>
+<!-- 头部 end  -->
+
+<div class="content_all">
+    <!--隔离top层 height:1rem-->
+    <div class="divLine_1REM"></div>
+    <!--点击进入商家详情-->
+    <a class="WBH-to-details clearfix d_box" href="map.html">
+        <div class="WBH-logo-img">
+            <img src="static/images/initlogo.png" width="50px" height="50px">
+        </div>
+        <div class="WBH-logo-msg d_flex">
+            <p>福满多自助火锅</p>
+            <span>建设北路三段11号附8-9</span>
+        </div>
+        <div class="WBH-logo-location">
+            <p>火锅</p>
+            <span><i class="icon iconfont yel">&#xe6c4;</i>500m</span>
+        </div>
+        <div class="WBH-logo-return">
+            <i class="icon iconfont">&#xe695;</i>
+        </div>
+    </a>
+</div>
+
+<div class="content_all card_contentAll">
+
+    <!--领取折扣券-->
+    <div class="cardBox sellerD-coupon">
+        <div class="d_box cardCont">
+            <div class="d_flex mui-clearfix cardleftInfo">
+                <div class="cardPrice f_l">
+                    <div class="markBg"></div>
+                    <i class="iconfont bingbeeBg">&#xe6df;</i>
+                    <div class="roundBorder">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <h2>2<font>折</font></h2>
+                </div>
+                <div class="cardInfo">
+                    <h3>卡券名称</h3>
+                    <h4>满150元打2折</h4>
+                    <p>使用期限：2015.10.10至2015.11.11</p>
+                </div>
+            </div>
+            <div class="cardStatus">
+                <div class="topRound"></div>
+                <div class="bottomRound"></div>
+                <div class="roundLine"></div>
+                <div class="roundBorder-Right">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <b class="status draw active">
+                    <i class="icon iconfont"></i>
+                </b>
+            </div>
+        </div>
+
+    </div>
+    <!--领取抵用券-->
+    <div class="cardBox orangeCardBox">
+        <div class="d_box cardCont">
+            <div class="d_flex mui-clearfix cardleftInfo">
+                <div class="cardPrice f_l">
+                    <div class="markBg"></div>
+                    <i class="iconfont bingbeeBg">&#xe6df;</i>
+                    <div class="roundBorder">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <h2>20<font>元</font></h2>
+                </div>
+                <div class="cardInfo">
+                    <h3>卡券名称</h3>
+                    <h4>满150元减20元</h4>
+                    <p>使用期限：2015.10.10至2015.11.11</p>
+                </div>
+            </div>
+            <div class="cardStatus">
+                <div class="topRound"></div>
+                <div class="bottomRound"></div>
+                <div class="roundLine"></div>
+                <div class="roundBorder-Right">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <b class="status draw">
+                     <i class="icon iconfont"></i>
+                </b>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="content_all">
+<!--商家详情-->
+    <a class="seller_details d_box" href="merchantDetails.html">
+       <span class="seller_detailsSpan">
+           <i class="icon iconfont">&#xe62a;</i>
+           商家详情
+       </span>
+        <p class="seller_detailsP d_flex">
+           <span>
+               阿撕烂打，佛哈和佛教...
+           </span>
+            <i class="icon iconfont">&#xe695;</i>
+        </p>
+    </a>
+    
+<!--商家环境-->
+    <a class="seller_details d_box" href="merchantDetailsImg.html">
+       <span class="seller_detailsSpan">
+               <i class="icon iconfont">&#xe62b;</i>
+           商家环境
+       </span>
+        <p class="seller_detailsP d_flex">
+           <span>
+              照片（5）
+           </span>
+            <i class="icon iconfont">&#xe695;</i>
+        </p>
+    </a>
+<!--商家展示-->
+
+    <a class="seller_details d_box" href="merchantDetailsImg.html">
+       <span class="seller_detailsSpan">
+               <i class="icon iconfont">&#xe62b;</i>
+           商品展示
+       </span>
+        <p class="seller_detailsP d_flex">
+           <span>
+              照片（5）
+           </span>
+            <i class="icon iconfont">&#xe695;</i>
+        </p>
+    </a>
+</div>
+</body>
+<script type="text/javascript">
+    TouchSlide({
+        slideCell:"#slideBox",
+        titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+        mainCell:".bd ul",
+        effect:"leftLoop",
+        autoPage:true,//自动分页
+        autoPlay:true //自动播放
+    });
+</script>
+</html>
