@@ -1,9 +1,71 @@
-html, body {
-  height: 100vh;
-  background-color: #f1f1f1;
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Microsoft YaHei','San-serif','Microsoft JhengHei','STXihei';
+  -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box; }
+
+html, body {
+  height: 100vh;
+  background-color: #f1f1f1;
+  -webkit-user-select: none;
+  user-select: none; }
+
+a {
+  text-decoration: none; }
+
+.f_l {
+  float: left;
+  /* 左浮动 */ }
+
+.f_r {
+  float: right;
+  /* 右浮动 */ }
+
+.displayNone {
+  display: none;
+  /* 隐藏 */ }
+
+.displayBlock {
+  display: block;
+  /* 显示 */ }
+
+/*清除浮动,*/
+.clearfix:after {
+  clear: both;
+  visibility: hidden;
+  content: "";
+  height: 0;
+  display: block;
+  overflow: hidden; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  /* ie8 */ }
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  /*appearance:改变元素的外观 外观像按钮*/
+  cursor: pointer;
+  outline: none; }
+
+input:hover {
+  outline: none; }
+
+li {
+  list-style: none; }
+
+button, optgroup, select, textarea {
+  color: inherit;
+  /*继承*/
+  font: inherit;
+  margin: 0; }
 
 h1 {
   font-size: 15px; }
@@ -14,6 +76,10 @@ h1 {
 
 div {
   height: 2rem;
-  border: 2px solid red; }
+  border: 2px solid red;
+  padding: 0.21333rem !important; }
+  div .test {
+    height: 1.33333rem;
+    background-color: #ccc; }
 
 /*# sourceMappingURL=index.css.map */
