@@ -67,19 +67,18 @@ button, optgroup, select, textarea {
   font: inherit;
   margin: 0; }
 
-h1 {
-  font-size: 15px; }
-  [data-dpr="2"] h1 {
-    font-size: 30px; }
-  [data-dpr="3"] h1 {
-    font-size: 45px; }
-
-div {
-  height: 2rem;
-  border: 2px solid red;
-  padding: 0.21333rem !important; }
-  div .test {
-    height: 1.33333rem;
-    background-color: #ccc; }
+.imflag-bg {
+  position: relative;
+  height: 100%;
+  background: #1A3742;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#1A3742), to(#9EA183));
+  background-image: -webkit-linear-gradient(top, #1A3742, #9EA183);
+  background-image: -moz-linear-gradient(top, #1A3742, #9EA183);
+  background-image: -ms-linear-gradient(top, #1A3742, #9EA183);
+  background-image: -o-linear-gradient(top, #1A3742, #9EA183);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1; }
 
 /*# sourceMappingURL=index.css.map */
